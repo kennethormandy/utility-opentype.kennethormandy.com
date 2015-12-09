@@ -1,0 +1,21 @@
+{
+  "name": "utility-opentype.kennethormandy.com",
+  "homepage": "http://utility-opentype.kennethormandy.com",
+  "author": "Kenneth Ormandy <hello@kennethormandy.com> (http://kennethormandy.com)",
+  "dependencies": {
+    "basscss-sass": "3.0.0",
+    "smoothscroll": "0.2.2",
+    "utility-opentype": "kennethormandy/utility-opentype"
+  },
+  "devDependencies": {
+    "harp": "0.20.1",
+    "surge": "0.17.3",
+    "terraform": "github:kennethormandy/terraform#ko-browserify-personal",
+    "typogr": "0.6.5"
+  },
+  "scripts": {
+    "start": "harp server",
+    "compile": "harp compile",
+    "deploy": "npm run compile && surge ./www utility-opentype.kennethormandy.com"
+  }
+}

@@ -1,0 +1,272 @@
+$container-width: 38em;
+$silver: #EEE;
+$font-family: "ff-tisa-sans-web-pro", "Tisa Sans Pro";
+// $monospace-font-family: "Source Code Pro"; // Default already
+@import "../../node_modules/basscss-sass/defaults";
+
+$purple: #897391;
+$red: #DD817D;
+$pink: #EEC6C0;
+$button-color: $white;
+$button-background-color: $purple;
+$button-font-weight: normal;
+$green: #99DD7D;
+$yellow: #F7EB93;
+$navy: mix($purple, #000, 50%);
+
+@import "../../node_modules/basscss-sass/base-reset";
+@import "../../node_modules/basscss-sass/base-forms";
+@import "../../node_modules/basscss-sass/base-tables";
+@import "../../node_modules/basscss-sass/base-typography";
+@import "../../node_modules/basscss-sass/color-base";
+@import "../../node_modules/basscss-sass/color-forms";
+// @import "../../node_modules/basscss-sass/color-tables";
+// @import "../../node_modules/basscss-sass/btn";
+@import "./btn.scss";
+@import "../../node_modules/basscss-sass/btn-primary";
+// @import "../../node_modules/basscss-sass/btn-outline";
+@import "../../node_modules/basscss-sass/type-scale";
+@import "../../node_modules/basscss-sass/utility-typography";
+@import "../../node_modules/basscss-sass/utility-layout";
+@import "../../node_modules/basscss-sass/align";
+@import "../../node_modules/basscss-sass/white-space";
+// @import "../../node_modules/basscss-sass/positions";
+@import "../../node_modules/basscss-sass/responsive-states";
+@import "../../node_modules/basscss-sass/grid";
+@import "../../node_modules/basscss-sass/flex-object";
+@import "../../node_modules/basscss-sass/borders";
+@import "../../node_modules/basscss-sass/colors";
+@import "../../node_modules/basscss-sass/background-colors";
+// @import "../../node_modules/basscss-sass/background-images";
+// @import "../../node_modules/basscss-sass/border-colors";
+@import "../../node_modules/basscss-sass/btn-sizes";
+// @import "../../node_modules/basscss-sass/color-forms-dark";
+// @import "../../node_modules/basscss-sass/color-input-range";
+// @import "../../node_modules/basscss-sass/color-progress";
+// @import "../../node_modules/basscss-sass/highlight";
+// @import "../../node_modules/basscss-sass/input-range";
+// @import "../../node_modules/basscss-sass/progress";
+@import "../../node_modules/basscss-sass/responsive-white-space";
+// @import "../../node_modules/basscss-sass/table-object";
+// @import "../../node_modules/basscss-sass/ui-utility-groups";
+@import "../../node_modules/basscss-sass/utility-headings";
+@import "../../node_modules/utility-opentype/index";
+@import "prism";
+
+@import "quote";
+
+* {
+  box-sizing: border-box;
+  font-synthesis: none;
+}
+
+html {
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // iOS
+  -webkit-tap-highloght-color: transparent;      // Android
+  @supports not (font-kerning: normal) {
+    font-feature-settings: "kern" 1;
+  }
+  font-kerning: normal;
+  // background: $white;
+}
+
+body {
+  background: transparent;
+  font-size: 1.3em;
+}
+
+@each $prefix in "::-moz-selection", "::selection" {
+  #{ $prefix } {
+    background-color: $purple;
+    color: $white;
+    text-shadow: 0 0 0 transparent;
+  }
+}
+
+img,
+svg {
+  display: block;
+}
+
+.btn {
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+ul,
+ol,
+blockquote {
+  padding-left: $space-3;
+}
+
+@media #{ $breakpoint-sm } {
+  ul,
+  ol,
+  blockquote {
+    padding-left: $space-3;
+    padding-right: $space-3;
+  }
+}
+
+@media #{ $breakpoint-md } {
+  ul,
+  ol {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  // .list-indent {
+  //   padding-left: $space-4;
+  //   padding-right: $space-4;
+  // }
+}
+
+blockquote {
+  font-style: italic;
+  footer {
+    font-style: normal;
+    margin-top: $space-1;
+    padding-left: $space-3;
+  }
+}
+
+a {
+  color: $purple;
+  &:hover,
+  &:focus {
+    color: darken($purple, 10%);
+    text-decoration: none;
+  }
+  &:active {
+    color: darken($purple, 20%);
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.bg-purple a {
+  // color: $darken-4;
+  color: inherit;
+  border-bottom: 1px solid $purple;
+  // text-shadow: 1px 1px 0 $lighten-1, -1px 1px 0px $lighten-1;
+}
+
+// Copy from 1403
+.weight-400 {
+  font-weight: 400;
+}
+
+.italic {
+  font-style: italic;
+}
+
+* > q:first-child {
+  margin-left: -0.33em;
+}
+
+.anchor {
+  display: inline-block;
+  margin-right: $space-1;
+  @media #{ $breakpoint-md } {
+    margin-right: 0;
+    text-indent: -1 * $space-3;
+  }
+}
+
+.select-none {
+  user-select: none;
+}
+
+.font-tisa {
+  font-family: "ff-tisa-web-pro", "Tisa Pro", "Gabriola", "Georgia", serif;
+}
+
+.font-enemy {
+  font-family: "lt-enemy";
+}
+
+.font-lavanderia {
+  font-family: "lt-lavanderia";
+  font-weight: 800;
+}
+
+.font-proxima {
+  font-family: "Proxima Nova";
+}
+
+.liga-off {
+  @supports not (font-variant-ligatures: normal) {
+    font-feature-settings: "liga" 0;
+  }
+  font-variant-ligatures: no-common-ligatures; // Normal doesn’t work since liga is default
+}
+
+
+.calt-off {
+  @supports not (font-variant-ligatures: normal) {
+    font-feature-settings: "calt" 0;
+  }
+  font-variant-ligatures: no-contextual; // Normal doesn’t work since calt is default
+}
+
+.inline {
+  display: inline;
+}
+
+figure {
+  margin: 0;
+  img {
+    width: 100%;
+  }
+}
+
+// Speak None
+//
+// Accessibility considerations for Basscss.
+//
+// Styleguide: base.speak-none
+.speak-none,
+[aria-hidden="true"] {
+  speak: none;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+  speak: none;
+}
+
+// Field
+//
+// [required] fix for Basscss.
+//
+// No styleguide reference.
+.field:invalid[value=""][required] {
+  border-color: transparent;
+}
+
+// Em Dash
+//
+// This won’t word break, while using `word-break` and an
+// em dash in the HTML will.
+//
+// Markup:
+// <span class="preface" data-content-"—">Kenneth Ormandy</span>
+//
+// No styleguide reference.
+.preface:before {
+  content: attr(data-content);
+}
+
+code {
+  // background: $darken-1;
+}
+
+pre code {
+  background: transparent;
+}
