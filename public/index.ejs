@@ -1,154 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Utility OpenType</title>
-    <title>Utility OpenType – Immutable, advanced typographic feature utilities with graceful fallbacks.</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Immutable, advanced typographic feature utilities that fallback gracefully with CSS alone. Works great on its own, or alongside Basscss. Apply ligatures, small caps, number variants, and more, with single CSS classes.">
-    <meta name="og:url" content="http://utility-opentype.kennethormandy.com">
-    <meta name="og:title" content="Introducing Moriston">
-    <meta name="og:description" content="Immutable, advanced typographic feature utilities that fallback gracefully in only 1.5kb of CSS. Apply ligatures, small caps, number variants, and more, with single CSS classes.">
-    <meta name="twitter:creator" content="@kennethormandy">
-    <!-- TODO
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="og:image" content="http://utility-opentype.kennethormandy.com/media/og-image.png">
-    <meta name="twitter:image:src" content="http://utility-opentype.kennethormandy.com/media/og-image.png">
-    -->
-    <script>
-      (function(d) {
-        var config = {
-          kitId: 'vgs2evo',
-          scriptTimeout: 3000,
-          async: true
-        },
-        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-      })(document);
-    </script>
-    <link href="http://fonts.kennethormandy.com/css/utility-opentype.css" rel="stylesheet">
-    <link href="/css/index.css" rel="stylesheet">
-  </head>
-  <body>
-    <article>
-      <div class="px2 container">
-        <header>
-          <!-- <div class="dispaly">
-            <p>Find <span class="liga-off">fi</span>ne web type in <spab class="lnum">1.5</span>kb of CSS.</p>
-            <p>Find <span class="liga">fi</span>ne web type in <span class="pnum">1.5</span><abbr class="caps">kb</abbr> of <abbr class="caps">CSS</abbr>.</p>
-          <div> -->
-          <!--
-          <h2 class="h1 h1-responsive font-tisa weight-400 italic"><q>Typography makes words visible.</q> <a href="https://github.com/kennethormandy/utility-opentype">Utlity OpenType</a> makes using advanced typography feature on the web practical.</h2>-->
-          <h1 class="h1 h1-responsive font-tisa">Utility OpenType</h1>
-          <p class="h2">Make the advanced typographic features already in your web fonts easier to access, with simple utility classes that fallback gracefully through <abbr class="caps">CSS</abbr> feature queries. Less than 1.5<abbr class="c2sc">kB</abbr> gzipped. Works on its own, or alongside frameworks like <a href="http://basscss.com">Basscss</a>. &nbsp;<a class="preface" data-content="—" href="https://twitter.com/kennethormandy">@kennethormandy</a></p>
-          <p><em><a href="https://github.com/kennethormandy/utility-opentype">Utility OpenType</a></em> helps you make the most of the font that you are loading in, reducing convoluted <abbr class="caps">CSS</abbr> into four-letter, typographic utility classes, because:</p>
-          <ol class="list-indent">
-            <li>OpenType features should be as <strong>easy to apply</strong> as bold and italics.
-            <li>OpenType features should <strong>cascade predictably</strong>.
-            <li>OpenType features should <strong>fallback gracefully</strong>.
-          </ol>
-          <p>This is described in more detail in the <a href="#design-decisions">design decisions</a>. The following examples are supported on Chrome, Firefox, and Internet Explorer 10+ and fallback as gracefully <a href="#browser-support">elsewhere</a>.</p>
-          <p>
-            <a class="btn btn-primary p2 sm-p3 h3" href="#usage">Get started</a>
-            <a class="btn bg-white purple p0 ml1 sm-p3 h3" href="https://github.com/kennethormandy/utility-opentype">Star on GitHub for later</a>
-          </p>
-          <!--
-          <ul>
-            <li><a href="">Start on GitHub</a> if you think this is interesting</li>
-            <li><a href="#usage">Include the CSS in your project</a> via npm or <abbr class="caps">CDN</abbr></li>
-            <li><a href="#newsletter" class="black"><span class="purple">Subscribe</span> to my infrequent web typography and type design newsletter</a></li>
-          </ul>
-          -->
-
-
-          <!--
-          <div class="clearfix">
-            <div class="col col-2"><div class="p2 bg-green">Chrome</div></div>
-            <div class="col col-2"><div class="p2 bg-green">Firefox</div></div>
-            <div class="col col-2"><div class="p2 bg-green">Internet Explorer</div></div>
-            <div class="col col-2"><div class="p2 bg-red">Safari</div></div>
-            <div class="col col-2"><div class="p2 bg-red">Mobile Safari</div></div>
-            <div class="col col-2"><div class="p2 bg-red">Android Webkit</div></div>
-          </div>
-          -->
-        </header>
-        <section id="liga">
-          <h2><a href="#liga" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Common ligatures</h2>
-          <p>Ligatures can help solve problems with space in a typeface, especially where collisions might otherwise occur:
-          <div class="test bg-silver rounded mb3 mt3">
-            <div class="overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
-              <div class="liga-off gray">Difficultés de film</div>
-              <div class="liga">Difficultés de film</div>
-            </div>
-            <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;liga&quot;&gt;Difficult&#233;s de film&lt;/span&gt;</code></pre>
-          </div>
-          <p>Most common ligatures mitigate spacing issues between specific combinations of letters within a typeface, often by connecting glyphs that might otherwise collide. The most cited example of this occurs between the <em>f</em> and itself, or another letter like <em>i</em>. Here, the <em>f f i</em> are turned into an <em class="liga">ffi</em> ligature, where the glyphs would awkwardly overlap otherwise.</p>
-          <p>Ligatures may also be included in a font to add character to a typeface, differentiate it, or to make a script font more convincing.</p>
-          <h3>Implementation</h3>
-          <p>OpenType features are applied in CSS using either the High-level <code>font-feature-settings</code> property, or a low level <code>font-variant-*</code> property. The former has better browser support, while the latter avoids maintainability issues by only influencing the one property you actually want to change. This library takes care of applying the correct property, based on the browser’s ability to support <code>font-variant-*</code></p>
-          <p>Using the <code>.liga</code> as an example:</p>
-          <pre class="h4 bg-navy silver p2 language-css">
+<article class="liga">
+  <div class="px2 container">
+    <header class="mb4">
+      <h1 class="h1 h1-responsive font-tisa">Utility OpenType</h1>
+      <p class="h2">Simple, <abbr class="caps">CSS</abbr> utility classes for advanced typographic features. Falls back gracefully through feature queries. Less than 1.5<abbr class="c2sc">kB</abbr><span class="widont">&nbsp;</span>gzipped. <a class="preface" data-content="—" href="https://twitter.com/kennethormandy">@kennethormandy</a></p>
+      <p><em><a href="https://github.com/kennethormandy/utility-opentype">Utility OpenType</a></em> helps you make the most of the font that you are loading in, reducing convoluted <abbr class="caps">CSS</abbr> into four-letter, typographic utility classes, because:</p>
+      <ol class="list-indent">
+        <li>OpenType features should be as <strong>easy to apply</strong> as bold and italics.
+        <li>OpenType features should <strong>cascade predictably</strong>.
+        <li>OpenType features should <strong>fallback gracefully</strong>.
+      </ol>
+      <p>This is described in more detail in the <a href="#design-decisions">design decisions</a>. The following examples are supported on Chrome, Firefox, and Internet Explorer 10+ and fallback as gracefully <a href="#browser-support">elsewhere</a>. Works on its own, or alongside frameworks like <a href="http://basscss.com">Basscss</a>.</p>
+      <p>
+        <a class="btn btn-primary p2 sm-p3 h3" href="#usage">Get started</a>
+        <a class="btn bg-white purple p0 ml1 sm-p3 h3" href="https://github.com/kennethormandy/utility-opentype">Star on GitHub for later</a>
+      </p>
+      <% /*
+      <div class="clearfix">
+        <div class="col col-2"><div class="p2 bg-green">Chrome</div></div>
+        <div class="col col-2"><div class="p2 bg-green">Firefox</div></div>
+        <div class="col col-2"><div class="p2 bg-green">Internet Explorer</div></div>
+        <div class="col col-2"><div class="p2 bg-red">Safari</div></div>
+        <div class="col col-2"><div class="p2 bg-red">Mobile Safari</div></div>
+        <div class="col col-2"><div class="p2 bg-red">Android Webkit</div></div>
+      </div>
+      */ %>
+    </header>
+    <section id="liga">
+      <h2><a href="#liga" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Common ligatures</h2>
+      <p>Ligatures can help solve problems with space in a typeface, especially where collisions might otherwise occur:
+      <div class="test bg-silver rounded mb3 mt3">
+        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
+          <div class="liga-off gray">Di<span class="test-feat">ffi</span>cultés de <span class="test-feat">fi</span>lm</div>
+          <div class="liga">Di<span class="test-feat">ffi</span>cultés de <span class="test-feat">fi</span>lm</div>
+        </div>
+        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;liga&quot;&gt;Difficult&#233;s de film&lt;/span&gt;</code></pre>
+      </div>
+      <p>Most common ligatures mitigate spacing issues between specific combinations of letters within a typeface, often by connecting glyphs that might otherwise collide. The most cited example of this occurs between the <em>f</em> and itself, or another letter like <em>i</em>. Here, the <em>f&#8202;f&#8202;i</em> are turned into an <em class="liga">ffi</em> ligature, where the glyphs would awkwardly overlap otherwise.</p>
+      <p>Ligatures may also be included in a font to add character to a typeface, differentiate it, or to make a script font more convincing.</p>
+      <h3>Implementation</h3>
+      <p>OpenType features are applied in CSS using either the High-level <code>font-feature-settings</code> property, or a low level <code>font-variant-*</code> property. The former has better browser support, while the latter avoids maintainability issues by only influencing the one property you actually want to change. This library takes care of applying the correct property, based on the browser’s ability to support <code>font-variant-*</code></p>
+      <p>Using the <code>.liga</code> as an example:</p>
+      <pre class="h4 bg-navy silver p2 language-css">
 <code>.liga {
 
   /* Gracefully degrade to `font-feature-settings` to
-   * avoid disrupting the OpenType feature cascade
-   * when possible. */
+  * avoid disrupting the OpenType feature cascade
+  * when possible. */
   @supports not (font-variant-ligatures: common-ligatures) {
     font-feature-settings: "liga";
   }
 
   /* IE doesn’t support @supports; explicitly use
-   * the prefixed version. */
+  * the prefixed version. */
   -ms-font-feature-settings: "liga";
 
   /* Best case scenerio, just use `font-variant-*`. */
   font-variant-ligatures: common-ligatures;
 }</code></pre>
-          <!--
-          <div class="clearfix">
-            <div class="col col-2"><div class="p2 bg-green">Chrome</div></div>
-            <div class="col col-2"><div class="p2 bg-green">Firefox</div></div>
-            <div class="col col-2"><div class="p2 bg-green">Internet Explorer</div></div>
-            <div class="col col-2"><div class="p2 bg-yellow">Safari</div></div>
-            <div class="col col-2"><div class="p2 bg-yellow">Mobile Safari</div></div>
-            <div class="col col-2"><div class="p2 bg-green">Android Webkit</div></div>
-          </div>
-          -->
-        </section>
-        <section id="dlig">
-          <h2><a href="#dlig" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Discretionary ligatures</h2>
-          <p>Discretionary ligatures’ defining characteristic is that they are available to enable at your descrection: they are disabled by default. Often, these are additional ligatures that might be considered too attention-grabbing or unconventional to be enabled in many situations:</p>
-          <div class="test bg-silver rounded mb3 mt3">
-            <div class="overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
-              <div class="gray">The suboctave stalemate</div>
-              <div class="dlig">The suboctave stalemate</div>
-            </div>
-            <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;dlig&quot;&gt;Suboctave stalemate&lt;/span&gt;</code></pre>
-          </div>
-          <p>Other typefaces approach this entirely differently, offering up different number styles when wrapping numbers in brackets, like the typeface <a href="https://www.typotheque.com/fonts/echo/features">Echo from Typotheque</a>.</p>
-        </section>
-        <section id="smcp">
-          <h2><a href="#smcp" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Small Caps</h2>
-          <p>Small Caps are less distracting than all capitals for longer form text settings. They also provide an additional way to apply emphasis within text:</p>
-          <div class="test bg-silver rounded mb3 mt3">
-            <div class="overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
-              <div class="inline gray">icu ICU Icu</div>
-              <div class="inline smcp">icu ICU Icu</div>
-            </div>
-            <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;smcp&quot;&gt;icu ICU Icu&lt;/span&gt;</code></pre>
-          </div>
-          <p>Matthew Butterick’s <cite>Practical Typography</cite> includes a very informative <a href="http://practicaltypography.com/small-caps.html">section on small caps</a>. As he points out:</p>
-          <blockquote>Don’t click on the small-cap for­mat­ting box in your word proces­sor. Ever. And don’t use the CSS prop­erty font-vari­ant: small-caps. Ever. These op­tions do not pro­duce small caps. They pro­duce in­fe­rior counterfeits.<footer><span class="preface" data-content="—">Matthew Butterick</span>, <a href="http://practicaltypography.com/small-caps.html"><cite>Practical Typography</cite></a></footer></blockquote>
-          <p>Instead, Utility OpenType uses the more recent <code>font-variant-caps: small-caps</code> feature:</p>
-          <pre class="h4 bg-navy silver p2 language-css">
+      <% /*
+      <div class="clearfix">
+        <div class="col col-2"><div class="p2 bg-green">Chrome</div></div>
+        <div class="col col-2"><div class="p2 bg-green">Firefox</div></div>
+        <div class="col col-2"><div class="p2 bg-green">Internet Explorer</div></div>
+        <div class="col col-2"><div class="p2 bg-yellow">Safari</div></div>
+        <div class="col col-2"><div class="p2 bg-yellow">Mobile Safari</div></div>
+        <div class="col col-2"><div class="p2 bg-green">Android Webkit</div></div>
+      </div>
+      */ %>
+    </section>
+    <% include _includes/newsletter.ejs %>
+    <section id="dlig">
+      <h2><a href="#dlig" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Discretionary ligatures</h2>
+      <p>Discretionary ligatures’ defining characteristic is that they are available to enable at your descrection: they are disabled by default. Often, these are additional ligatures that might be considered too attention-grabbing or unconventional to be enabled in many situations:</p>
+      <div class="test bg-silver rounded mb3 mt3">
+        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
+          <div class="gray">The subo<span class="test-feat">ct</span>ave <span class="test-feat">st</span>alemate</div>
+          <div class="dlig">The subo<span class="test-feat">ct</span>ave <span class="test-feat">st</span>alemate</div>
+        </div>
+        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;dlig&quot;&gt;Suboctave stalemate&lt;/span&gt;</code></pre>
+      </div>
+      <p>Other typefaces approach this entirely differently, offering up different number styles when wrapping numbers in brackets, like the typeface <a href="https://www.typotheque.com/fonts/echo/features">Echo from Typotheque</a>.</p>
+    </section>
+    <section id="smcp">
+      <h2><a href="#smcp" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Small Caps</h2>
+      <p>Small Caps are less distracting than all capitals for longer form text settings. They also provide an additional way to apply emphasis within text:</p>
+      <div class="test bg-silver rounded mb3 mt3">
+        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
+          <div class="gray"><span class="test-feat">icu</span> I&#8203;C&#8203;U Icu</div>
+          <div class="smcp"><span class="test-feat">icu</span> I&#8203;C&#8203;U Icu</div>
+        </div>
+        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;smcp&quot;&gt;icu ICU Icu&lt;/span&gt;</code></pre>
+      </div>
+      <p>Matthew Butterick’s <cite>Practical Typography</cite> includes a very informative <a href="http://practicaltypography.com/small-caps.html">section on small caps</a>. As he points out:</p>
+      <blockquote>Don’t click on the small-cap for­mat­ting box in your word proces­sor. Ever. And don’t use the CSS prop­erty font-vari­ant: small-caps. Ever. These op­tions do not pro­duce small caps. They pro­duce in­fe­rior counterfeits.<footer><span class="preface" data-content="—">Matthew Butterick</span>, <a href="http://practicaltypography.com/small-caps.html"><cite>Practical Typography</cite></a></footer></blockquote>
+      <p>Instead, Utility OpenType uses the more recent <code>font-variant-caps: small-caps</code> feature:</p>
+      <pre class="h4 bg-navy silver p2 language-css">
 <code>.smcp {
   /* For browsers that don’t support OpenType,
-   * features, use all caps. */
+  * features, use all caps. */
   text-transform: uppercase;
 
   /* Progressively enhance with `font-feature-settings`
-   * if `font-variant-caps` isn’t supported. */
+  * if `font-variant-caps` isn’t supported. */
   @supports not (font-variant-caps: small-caps) {
-    text-transform: inherit;
+  text-transform: inherit;
     font-feature-settings: "lnum", "smcp", "c2sc" 0;
   }
 
@@ -158,310 +113,300 @@
     font-variant-caps: small-caps;
   }
 }</code></pre>
-        </blockquote>
-        </section>
-        <section id="c2sc">
-          <h2><a href="#c2sc" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Caps to Small Caps</h2>
-          <p>The Caps to Small Caps OpenType feature will convert all letters, not just lowercase letters, into Small Caps:</p>
-          <div class="test bg-silver rounded mb3 mt3">
-            <div class="overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
-              <div class="inline gray">icu ICU Icu</div>
-              <div class="inline c2sc">icu ICU Icu</div>
-            </div>
-            <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;c2sc&quot;&gt;icu ICU Icu&lt;/span&gt;</code></pre>
-          </div>
-        </section>
-        <section id="case">
-          <h2><a href="#case" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Case sensitive forms</h2>
-          <p>Case Sensitive Forms are alternate glyphs that are specifically deisng to work alongside all caps settings, or alongside text:</p>
-          <div class="test bg-silver rounded mb3 mt3">
-            <div class="overflow-hidden p1 sm-p2 md-p3 font-tisa h1">
-              <div class="gray">¿¡№25 @KENNETHORMANDY!?</div>
-              <div class="case">¿¡№25 @KENNETHORMANDY!?</div>
-              <!-- This won’t work in Chrome, prob. others because `font-variant-numeric` isn’t supperted. Works in FF. -->
-              <div class="onum c2sc">¿¡№25 @KENNETHORMANDY!?</div>
-            </div>
-            <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;case&quot;&gt;¿¡WHAT!? $1,000!?&lt;/span&gt;</code></pre>
-          </div>
-          <p>As we continue to inject @-mentions, #hashtags, and other symbols into our text with increasing frequency, Case Sensitive Forms in fonts can help you show conhesively typeset this information.</p>
-          <p>In well-formed fonts, the lowercase forms should be set as the defaults, with the all-caps or lining variations available on the Case Sensitive Forms feature. This feature (and <abbr class="caps">CSS</abbr> class) also overrides any number styles set, turning <a href="#onum">Oldstyle Numbers</a> into <a href="#lnum">Lining Numbers</a>.</p>
-        </section>
-        <section id="titl">
-          <h2><a href="#titl" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Titling alternaes</h2>
-          <p>TODO description paragraph</p>
-          <div class="test bg-silver rounded mb3 mt3">
-            <div class="test overflow-hidden font-lavanderia p1 sm-p2 md-p3 rounded bg-silver h1 h0-responsive">
-              <div class="gray">Sign Painters Forever</div>
-              <div class="titl">Sign Painters Forever</div>
-            </div>
-            <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;titl&quot;&gt;Sign Painters Forever&lt;/span&gt;</code></pre>
-          </div>
-        </section>
-        <section id="calt">
-          <h2><a href="#calt" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Contextual alternates</h2>
-          <p>TODO description paragraph</p>
-          <div class="test bg-silver rounded mb3 mt3">
-            <div class="overflow-hidden p1 sm-p2 md-p3 font-enemy h1 h1-responsive">
-              <div class="calt-off gray">Bookkeepers</div>
-              <div class="calt">Bookkeepers</div>
-            </div>
-            <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;calt&quot;&gt;Bookkeepers&lt;/span&gt;</code></pre>
-          </div>
-          <!--
-          <div class="clearfix">
-            <div class="col col-2"><div class="p2 bg-green">Chrome</div></div>
-            <div class="col col-2"><div class="p2 bg-green">Firefox</div></div>
-            <div class="col col-2"><div class="p2 bg-green">Internet Explorer</div></div>
-            <div class="col col-2"><div class="p2 bg-yellow">Safari</div></div>
-            <div class="col col-2"><div class="p2 bg-yellow">Mobile Safari</div></div>
-            <div class="col col-2"><div class="p2 bg-red">Android Webkit</div></div>
-          </div>
-          -->
-        </section>
-        <section id="hist">
-          <h2><a href="#hist" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Historical alternates</h2>
-          <p>TODO description paragraph</p>
-          <div class="test bg-silver rounded mb3 mt3">
-            <div class="overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
-              <div class="gray">Blasphemous</div>
-              <div class="hist">Blasphemous</div>
-            </div>
-            <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;hist&quot;&gt;Blasphemous&lt;/span&gt;</code></pre>
-          </div>
-        </section>
-        <section id="swsh">
-          <h2><a href="#swsh" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Swash</h2>
-          <p>TODO description paragraph</p>
-          <div class="test bg-silver rounded mb3 mt3">
-            <div class="overflow-hidden p1 sm-p2 md-p3 font-lavanderia h0 h0-responsive">
-              <div class="calt-off gray">Notably</div>
-              <div>No<span class="swsh">t</span>abl<span class="swsh">y</span></div>
-            </div>
-            <pre class="h4 bg-navy silver p2 language-html"><code>No&lt;span class=&quot;swsh&quot;&gt;t&lt;/span&gt;abl&lt;span class=&quot;swsh&quot;&gt;y&lt;/span&gt;</code></pre>
-          </div>
-        </section>
-        <section id="tnum-lnum">
-          <h2><a href="#tnum-lnum" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Tabular, Lining numbers</h2>
-          <p>TODO description paragraph</p>
-          <div class="test bg-silver rounded mb3 mt3">
-            <div class="overflow-hidden p1 sm-p2 md-p3 font-tisa h1">
-              <!-- Width of line one should not equal width of line two -->
-              <div class="gray">0123456789 $10 £20 ¥30 40% 50‰</div>
-              <div class="tnum lnum">0123456789 $10 £20 ¥30 40% 50‰</div>
-            </div>
-            <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;tnum lnum&quot;&gt;0123456789 $10 £20 ¥30 40% 50‰&lt;/span&gt;</code></pre>
-          </div>
-        </section>
-        <section id="tnum-onum">
-          <h2><a href="#tnum-onum" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Tabular, Oldstyle numbers</h2>
-          <p>TODO description paragraph</p>
-          <div class="test bg-silver rounded mb3 mt3">
-            <div class="overflow-hidden p1 sm-p2 md-p3 font-tisa h1">
-              <div class="gray">0123456789 $10 £20 ¥30 40% 50‰</div>
-              <div class="tnum onum">0123456789 $10 £20 ¥30 40% 50‰</div>
-            </div>
-            <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;tnum onum&quot;&gt;0123456789 $10 £20 ¥30 40% 50‰&lt;/span&gt;</code></pre>
-          </div>
-        </section>
-        <section id="pnum-lnum">
-          <h2><a href="#pnum-lnum" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Proportional, Lining numbers</h2>
-          <p>TODO description paragraph</p>
-          <div class="test bg-silver rounded mb3 mt3">
-            <div class="overflow-hidden p1 sm-p2 md-p3 font-tisa h1">
-              <div class="gray">0123456789 $10 £20 ¥30 40% 50‰</div>
-              <div class="pnum lnum">0123456789 $10 £20 ¥30 40% 50‰</div>
-            </div>
-            <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;pnum lnum&quot;&gt;0123456789 $10 £20 ¥30 40% 50‰&lt;/span&gt;</code></pre>
-          </div>
-        </section>
-        <section id="pnum-onum">
-          <h2><a href="#pnum-onum" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Proportional, Oldstyle numbers</h2>
-          <p>TODO description paragraph</p>
-          <div class="test bg-silver rounded mb3 mt3">
-            <div class="overflow-hidden p1 sm-p2 md-p3 font-tisa h1">
-              <div class="gray">0123456789 $10 £20 ¥30 40% 50‰</div>
-              <div class="pnum onum">0123456789 $10 £20 ¥30 40% 50‰</div>
-            </div>
-            <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;pnum onum&quot;&gt;0123456789 $10 £20 ¥30 40% 50‰&lt;/span&gt;</code></pre>
-          </div>
-        </section>
-        <section id="frac">
-          <h2><a href="#frac" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Diagonal fractions</h2>
-          <p>TODO description paragraph</p>
-          <div class="test bg-silver rounded mb3 mt3">
-            <div class="overflow-hidden p1 sm-p2 md-p3 font-tisa h1">
-              <div class="gray">1/2 1/4 1/100</div>
-              <div class="frac">1/2 1/4 1/100</div>
-            </div>
-            <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;frac&quot;&gt;1/2 1/4 1/100&lt;/span&gt;</code></pre>
-          </div>
-        </section>
-        <!--
-        <section id="afrc">
-          <h2><a href="#afrc" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Alternate fractions</h2>
-          <p>TODO description paragraph</p>
-          <div class="overflow-hidden p1 sm-p2 md-p3 font-tisa h1 red">
-            <div class="gray">1/2 1/4 1/100</div>
-            <div class="afrc">1/2 1/4 1/100</div>
-          </div>
-          <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;afrc&quot;&gt;1/2 1/4 1/100&lt;/span&gt;</code></pre>
-        </section>
-        -->
-        <section id="ordn">
-          <h2><a href="#ordn" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Ordinals</h2>
-          <p>TODO description paragraph</p>
-          <div class="test bg-silver rounded mb3 mt3">
-            <div class="overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h0-responsive">
-              <div class="gray">1a 2o</div>
-              <div class="ordn">1a 2o</div>
-            </div>
-            <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;ordn&quot;&gt;1a 2o&lt;/span&gt;</code></pre>
-          </div>
-        </section>
-        <section id="subs">
-          <h2><a href="#subs" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Subscripts</h2>
-          <p>TODO description paragraph</p>
-          <div class="test bg-silver rounded mb3 mt3">
-            <div class="overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
-              <div class="gray">Test1</div>
-              <div>Test<span class="subs">1</span> with <code>.subs</code> only</div>
-              <div class="gray">Test<sub>1</sub> with <code>sub</code> only</div>
-              <div>Test<sub class="subs">1</sub> with <code>sub</code> and <code>.subs</code></div>
-            </div>
-            <pre class="h4 bg-navy silver p2 language-html"><code>H&lt;sub class=&quot;subs&quot;&gt;2&lt;/sub&gt;O</code></pre>
-          </div>
-        </section>
-        <section id="sups">
-          <h2><a href="#sups" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Superscripts</h2>
-          <p>TODO description paragraph</p>
-          <div class="test bg-silver rounded mb3 mt3">
-            <div class="overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
-              <div class="gray">Test1</div>
-              <div>Test<span class="sups">1</span> with <code>.sups</code> only</div>
-              <div class="gray">Test<sup>1</sup> with <code>sup</code> only</div>
-              <div>Test<sup class="sups">1</sup> with <code>sup</code> and <code>.sups</code></div>
-            </div>
-            <pre class="h4 bg-navy silver p2 language-html"><code>H&lt;sup class=&quot;sups&quot;&gt;2&lt;/sup&gt;O</code></pre>
-          </div>
-        </section>
-        <section id="sinf">
-          <h2><a href="#sinf" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Scientific Inferiors</h2>
-          <p>TODO description paragraph</p>
-          <div class="test bg-silver rounded mb3 mt3">
-            <div class="overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
-              <div class="gray">H2O</div>
-              <div>H<span class="sinf">2</span>O with <code>.sinf</code> only</div>
-              <div class="gray">H<sub>2</sub>O with <code>sub</code> only</div>
-              <div>H<sub class="sinf">2</sub>O with <code>sub</code> and <code>.sinf</code></div>
-            </div>
-            <pre class="h4 bg-navy silver p2 language-html"><code>H&lt;sub class=&quot;sinf&quot;&gt;2&lt;/sub&gt;O</code></pre>
-          </div>
-        </section>
-        <section id="zero">
-          <h2><a href="#zero" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Slashed Zero</h2>
-          <p>TODO description paragraph</p>
-          <div class="test bg-silver rounded mb3 mt3">
-            <div class="overflow-hidden p1 sm-p2 md-p3 font-proxima h1 h0-responsive">
-              <div class="gray">$1,000,000</div>
-              <div class="zero">$1,000,000</div>
-            </div>
-            <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;zero&quot;&gt;$1,000,000&lt;/span&gt;</code></pre>
-          </div>
-        </section>
-        <section id="zero-onum">
-          <h2><a href="#zero" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Slashed, Oldstyle Zero</h2>
-          <p>TODO description paragraph</p>
-          <!-- This won’t work in Chrome, prob. others because `font-variant-numeric` isn’t supperted. Works in FF. -->
-          <div class="rounded bg-silver">
-            <div class="overflow-hidden p1 sm-p2 md-p3 font-proxima h1 h0-responsive">
-              <div class="gray">$0.01 borrowed</div>
-              <div class="zero onum">$0.01 borrowed</div>
-            </div>
-            <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;zero onum&quot;&gt;$0.01 borrowed&lt;/span&gt;</code></pre>
-          </div>
-        </section>
-        <section id="request">
-          <h2><a href="#request" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Feature requests</h2>
-          <a class="block mb3 mt3 p1 sm-p2 md-p3 rounded bg-silver black h2" href="https://github.com/kennethormandy/utility-opentype/issues">Think something is missing? Submit an issue or feature request on GitHub and <span class="purple">let’s talk about it</span>!</a>
-        </section>
-        <section id="design-decisions">
-          <h2><a href="#design-decisions" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Design decisions</h2>
-          <!-- <p>TODO Intro para… the idea that utility classes</p> -->
-          <blockquote>…provide the backbone for typography and layout and, once set, should never be changed or extended. Each utility should contain as few CSS properties as possible, generally just one or two. Utilities should do one thing and do it well, they should be simple and obvious to use, and they should operate independently.
-            <footer><span class="preface" data-content="—">Brent Jackson</span>, <a href="http://www.basscss.com/docs/reference/principles/#immutable-utilities"><cite>Basscss Design Principles</cite></a></footer>
-          </blockquote>
-          <ol>
-            <li>
-              <h3>OpenType features should be as easy to apply as bold and italics.</h3>
-              <p><em>Utility OpenType</em> provides concise, declarative classes that you can easily apply to entire elements, or specifically scope to inline spans when you are working on fine typographic details like discretionary ligatures. They are intended to be immutable and don’t interfere or concern themselves with any other part of your <abbr class="caps">CSS</abbr>.</p>
-            </li>
-            <li>
-              <h3>OpenType features should cascade predictably.</h3>
-              <p>The <code>font-feature-settings</code> property is often used to apply these advanced typographic features, because it has significantly better browser support than its lower-level, <code>font-variant-*</code> counterpart. Unfortunately, it doesn’t always carry down one feature to the next; imagine only being able to use the <code>margin</code> or <code>font</code> property in <abbr class="caps">CSS</abbr>, but not <code>margin-left</code> or <code>font-size</code> and you’ll begin to see the maintainability problems this can cause.</p>
-              <p>You can read more about this problem in my article on <a href="http://kennethormandy.com/journal/normalize-opentype-css">normalizing OpenType feature defaults</a>, and on <a href="#">Typekit Practice</a>—or, skip both: Utility OpenType mitigates this problem through <abbr class="caps">CSS’</abbr> <code>@supports</code> feature queries.</p>
-            </li>
-            <li>
-              <h3>OpenType features should fallback gracefully.</h3>
-              <p>Provide a better experience for Chrome, Firefox, and Internet Explorer 10+ (yes, seriously) without negatively impacting the rest: <a href="#c2sc">Small Caps</a> are progressively enhanced from <code>text-transform: uppercase</code>, and <a href="#sinf">Scientific Inferiors</a> maintain the browser default <code>&lt;sub&gt;</code> styling so your H<sub class="subs">2</sub>O never says <span class="caps">H</span><span class="pnum">2</span><span class="caps">O</span>.</p>
-            </li>
-          </ol>
-        </section>
-        <section id="usage">
-          <h2><a href="#usage" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Usage</h2>
-          <p>Utility OpenType is ready to use with Sass, Post<abbr class="caps">CSS</abbr>, or vanilla <abbr class="caps">CSS</abbr>. If you’re using Sass or Post<abbr class="caps">CSS</abbr>, install it through npm:</p>
-          <pre class="h4 bg-navy silver p2 language-sh"><code><span class="select-none gray">$&nbsp;</span>npm install --save utility-opentype</code></pre>
-          <p>Then, include it within your source files:</p>
-          <pre class="h4 bg-navy silver p2 language-css"><code>@import "utility-opentype";</code></pre>
-          <p>If you’re using Sass without Eyeglass modules, you will need to include the actual path to the file in the <code>node_modules</code> directory, for example:</p>
-          <pre class="h4 bg-navy silver p2 language-css"><code>@import "../node_modules/utility-opentype/index";</code></pre>
-          <p>If you’d like to use the <abbr class="caps">CSS</abbr> directly, download the <a href="https://github.com/kennethormandy/utility-opentype">latest version of the compiled file</a>, or reference the hosted <abbr class="caps">CDN</abbr> version in your <abbr class="caps">HTML</abbr>:</p>
-          <pre class="h4 bg-navy silver p2 language-html"><code>&lt;link href=&quot;http://utility-opentype.kennethormandy.com/css/index.css&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
-          <p>That’s it! You’re ready to use the classes within your markup.</p>
-          <!-- TODO Show more complex example of using multiple classes here. -->
-        </section>
-        <section id="accessibility">
-          <h2><a href="#accessibility" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Accessibility</h2>
-          <p>OpenType features don’t alter the underlying text: spelling, the ability to copy-and-paste, interactive features like searching within a page or editing text, and accessibility considerations like compatibility with screen readers, are not impacted.</p>
-        </section>
-        <section id="browser-support">
-          <h2><a href="#browser-support" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Browser support</h2>
-          <p>The example shown are fully supported in Chrome, Firefox, and Internet Explorer 10+. Safari 6+ and Safari 6+ on i<abbr class="c2sc">OS</abbr> only support <a href="#liga">Common Ligatures</a> and <a href="#calt">Contextual Alternates</a>, and only as a browser default; they cannot be disabled via <abbr class="caps">CSS</abbr>.</p>
-          <p>All features use a combination of progressive enhancement and graceful degredation—primarily through <code>@supports</code> <abbr class="caps">CSS</abbr> feature queries—to mitigate problems on browsers and devices where advanced typography features aren’t supported.</p>
-        </section>
-      </div>
-      <footer class="mt4 bg-purple">
-        <div class="bg-lighten-3">
-          <div class="px2 py4 container">
-            <form id="newsletter" class="p1 sm-p2 md-p3 rounded bg-purple" action="http://kennethormandy.us7.list-manage.com/subscribe/post?u=204b02dda299ca1c4b2345eb3&amp;id=6a931fa413" method="post" target="_blank" validate>
-              <label for="mce-EMAIL" class="">
-              <h3 class="h2 m0 mb3">Web typography for static&nbsp;sites</h3>
-              <p>Subscribe to my occasional newsletter on web typogrpahy and type design.</p>
-              <span class="hidden">Email Address</span>
-              <input type="email" value="" placeholder="you@example.com" name="EMAIL" id="mce-EMAIL" required class="field">
-              <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn bg-white rounded">
-              </label>
-            </form>
-            <h3 id="works-cited">Works Cited</h3>
-            <ul>
-              <li><a href="https://www.typotheque.com/fonts/echo/features"><cite>Small caps | Butterick’s Practical Typography</cite></a> Matthew Butterick</li>
-              <li><a href="https://www.typotheque.com/articles/opentype_features_in_web_browsers_-_tests"><cite>OpenType features in web browsers</cite></a> Gustavo Ferreira</li>
-              <li><a href="http://www.basscss.com/docs/reference/principles/"><cite>Basscss Design Principles</cite></a> Brent Jackson</li>
-              <li><a href="https://www.microsoft.com/typography/otspec/"><cite>OpenType specification</span></a> Microsoft, et al.</li>
-              <li><a href="http://stateofwebtype.com/"><cite>State of Web Type</cite></a> Bram Stein</li>
-              <li><a href="https://www.typotheque.com/fonts/echo/features"><cite>Echo font family, OpenType font features</cite></a> Typotheque</li>
-            </ul>
-            <h3 id="thanks">Thanks</h3>
-            <p>Thanks to <a href="https://twitter.com/quitequinn">Quinn Keaveney</a> and <a href="https://twitter.com/nicewebtype">Tim Brown</a> for their early feedback on this library. Thanks to <a href="https://twitter.com/rileycran">Riley Cran</a> and <a href="https://twitter.com/sintaxi">Brock Whitten</a> for their feedback on the documentation, and most other things I work on. </p>
-            <h3 id="colophon">Colophon</h3>
-            <p>Released for <a href="https://twitter.com/search?f=tweets&q=%23OpenTypeFeatures%20since%3A2015-12-06until%3A2015-12-15&src=typd">#<span class="smcp">opentypefeature</span> week</a>. Site and examples set in <a href="https://www.fontshop.com/superfamilies/ff-tisa"><abbr class="caps">FF</abbr> Tisa <span class="caps">&amp;</span> <abbr class="caps">FF</abbr> Tisa Sans</a> by Mitja Miklavčič, served by Typekit. Additional examples set in <a href="http://losttype.com/font/?name=lavanderia">Lavanderia</a> by James T. Edmondson, and <a href="http://losttype.com/font/?name=enemy">Enemy</a> by Shiva Nallaperumal, via Lost Type.</p>
-            <p>Designed and developed by <a href="http://twitter.com/kennethormandy">Kenneth Ormandy</a>, at the Central Library and home in Vancouver, <abbr title="British Columbia" class="caps">BC</abbr>. Documentation built with <a href="http://harpjs.com">Harp</a> and deployed on <a href="https://surge.sh">Surge.sh</a>.</p>
-          </div>
+    </blockquote>
+    </section>
+    <section id="c2sc">
+      <h2><a href="#c2sc" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Caps to Small Caps</h2>
+      <p>The Caps to Small Caps OpenType feature will convert all letters, not just lowercase letters, into Small Caps:</p>
+      <div class="test bg-silver rounded mb3 mt3">
+        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
+          <div class="gray test-feat">icu I&#8203;C&#8203;U Icu</div>
+          <div class="c2sc test-feat">icu I&#8203;C&#8203;U Icu</div>
         </div>
-        <a href="https://github.com/kennethormandy/utility-opentype" class="center block">
-          <div class="px2 py3 container">View Source</div>
-        </a>
-      </footer>
-    </article>
-    <script src="/js/index.js"></script>
-  </body>
-</html>
+        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;c2sc&quot;&gt;icu ICU Icu&lt;/span&gt;</code></pre>
+      </div>
+    </section>
+    <section id="case">
+      <h2><a href="#case" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Case sensitive forms</h2>
+      <p>Case Sensitive Forms are alternate glyphs that are specifically deisng to work alongside all caps settings, or alongside text:</p>
+      <div class="test bg-silver rounded mb3 mt3">
+        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1">
+          <div class="gray"><span class="test-feat">¿¡</span><span class="test-feat">№25</span> <span class="test-feat">@</span>K&#8203E&#8203N&#8203N&#8203E&#8203T&#8203H&#8203O&#8203R&#8203M&#8203A&#8203N&#8203D&#8203Y<span class="test-feat">!?</span></div>
+          <div class="case"><span class="test-feat">¿¡</span><span class="test-feat">№25</span> <span class="test-feat">@</span>K&#8203E&#8203N&#8203N&#8203E&#8203T&#8203H&#8203O&#8203R&#8203M&#8203A&#8203N&#8203D&#8203Y<span class="test-feat">!?</span></div>
+        </div>
+        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;case&quot;&gt;¿¡WHAT!? $1,000!?&lt;/span&gt;</code></pre>
+      </div>
+      <p>As we continue to inject @-mentions, #hashtags, and other symbols into our text with increasing frequency, Case Sensitive Forms in fonts can help you show conhesively typeset this information.</p>
+      <p>In well-formed fonts, the lowercase forms should be set as the defaults, with the all-caps or lining variations available on the Case Sensitive Forms feature. This feature (and <abbr class="caps">CSS</abbr> class) also overrides any number styles set, turning <a href="#onum">Oldstyle Numbers</a> into <a href="#lnum">Lining Numbers</a>.</p>
+    </section>
+    <section id="titl">
+      <h2><a href="#titl" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Titling alternaes</h2>
+      <p>TODO description paragraph</p>
+      <div class="test bg-silver rounded mb3 mt3">
+        <div class="test overflow-hidden font-lavanderia p1 sm-p2 md-p3 rounded bg-silver h1 h0-responsive center">
+          <div class="gray calt-off"><span class="test-feat">S</span>ign <span class="test-feat">P</span>ainters <span class="calt"><span class="test-feat">R</span>ule</span></div>
+          <div class="titl calt-off"><span class="test-feat">S</span>ign <span class="test-feat">P</span>ainters <span class="calt"><span class="test-feat">R</span>ule</span></div>
+        </div>
+        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;titl&quot;&gt;Sign Painters Rule&lt;/span&gt;</code></pre>
+      </div>
+    </section>
+    <section id="calt">
+      <h2><a href="#calt" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Contextual alternates</h2>
+      <p>TODO description paragraph</p>
+      <div class="test bg-silver rounded mb3 mt3">
+        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-enemy h1 h1-responsive">
+          <div class="calt-off gray">B<span class="test-feat gray" data-content="o">oo</span><span class="test-feat gray" data-content="k">kk</span><span class="test-feat gray" data-content="e">ee</span>pers</div>
+          <div class="calt">B<span class="test-feat test-overlay" data-content="o">oo</span><span class="test-feat test-overlay" data-content="k">kk</span><span class="test-feat test-overlay" data-content="e">ee</span>pers</div>
+        </div>
+        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;calt&quot;&gt;Bookkeepers&lt;/span&gt;</code></pre>
+      </div>
+      <% /*
+      <div class="clearfix">
+        <div class="col col-2"><div class="p2 bg-green">Chrome</div></div>
+        <div class="col col-2"><div class="p2 bg-green">Firefox</div></div>
+        <div class="col col-2"><div class="p2 bg-green">Internet Explorer</div></div>
+        <div class="col col-2"><div class="p2 bg-yellow">Safari</div></div>
+        <div class="col col-2"><div class="p2 bg-yellow">Mobile Safari</div></div>
+        <div class="col col-2"><div class="p2 bg-red">Android Webkit</div></div>
+      </div>
+      */ %>
+    </section>
+    <section id="hist">
+      <h2><a href="#hist" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Historical alternates</h2>
+      <p>Historical glyph variants are for glyphs that are not likely to be useful in everyday settings, but were </p>
+      <div class="test bg-silver rounded mb3 mt3">
+        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
+          <div class="gray">Bla<span class="test-feat">s</span>phemou<span class="test-feat">s</span></div>
+          <div class="hist">Bla<span class="test-feat">s</span>phemou<span class="test-feat">s</span></div>
+        </div>
+        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;hist&quot;&gt;Blasphemous&lt;/span&gt;</code></pre>
+      </div>
+    </section>
+    <section id="swsh">
+      <h2><a href="#swsh" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Swash</h2>
+      <p>TODO description paragraph</p>
+      <div class="test bg-silver rounded mb3 mt3">
+        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-lavanderia h00 h00-responsive">
+          <div class="gray">No<span class="test-feat">t</span>abl<span class="test-feat">y</span> Yours</div>
+          <div>No<span class="swsh test-feat">t</span>abl<span class="swsh test-feat">y</span> Yours</div>
+        </div>
+        <pre class="h4 bg-navy silver p2 language-html"><code>No&lt;span class=&quot;swsh&quot;&gt;t&lt;/span&gt;abl&lt;span class=&quot;swsh&quot;&gt;y Yours&lt;/span&gt;</code></pre>
+      </div>
+    </section>
+    <section id="pnum-onum">
+      <h2><a href="#pnum-onum" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Proportional, Oldstyle numbers</h2>
+      <p>There are situations where different kinds of number styles are useful based on the kind of information you are trying to typeset. Not all typefaces contain all number styles, but if they are availably, these helper classes will use them. Oldstyle, proportional numbers are often the default in typefaces intended for setting long-form text, especailly serifs:</p>
+      <div class="test bg-silver rounded mb3 mt3">
+        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1">
+          <% /* <div class="gray">0123456789 $10 £20 ¥30 40% 50‰</div> */ %>
+          <div class="pnum onum">0123456789 $10 £20 ¥30 40% 50‰</div>
+        </div>
+        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;pnum onum&quot;&gt;0123456789 $10 £20 ¥30 40% 50‰&lt;/span&gt;</code></pre>
+      </div>
+      <p>Proportional numbers are designed to take up whatever width they need. Old style numbers, <code>.onum</code>, are designed to sit alongside the lowercase letters, so they are less distracting within text.</p>
+    </section>
+    <section id="pnum-lnum">
+      <h2><a href="#pnum-lnum" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Proportional, Lining numbers</h2>
+      <p>Tabular numerals are monospaced, so different information can be easily compared when stacked vertically:</p>
+      <div class="test bg-silver rounded mb3 mt3">
+        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1">
+          <div class="gray">0123456789 $10 £20 ¥30 40% 50‰</div>
+          <div class="pnum lnum">0123456789 $10 £20 ¥30 40% 50‰</div>
+        </div>
+        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;pnum lnum&quot;&gt;0123456789 $10 £20 ¥30 40% 50‰&lt;/span&gt;</code></pre>
+      </div>
+    </section>
+    <section id="tnum-lnum">
+      <h2><a href="#tnum-lnum" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Tabular, Lining numbers</h2>
+      <p>TODO</p>
+      <div class="test bg-silver rounded mb3 mt3">
+        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1">
+          <% /* Width of line one should not equal width of line two */ %>
+          <div class="gray">0123456789 $10 £20 ¥30 40% 50‰</div>
+          <div class="tnum lnum">0123456789 $10 £20 ¥30 40% 50‰</div>
+        </div>
+        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;tnum lnum&quot;&gt;0123456789 $10 £20 ¥30 40% 50‰&lt;/span&gt;</code></pre>
+      </div>
+    </section>
+    <section id="tnum-onum">
+      <h2><a href="#tnum-onum" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Tabular, Oldstyle numbers</h2>
+      <p>TODO</p>
+      <div class="test bg-silver rounded mb3 mt3">
+        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1">
+          <div class="gray">0123456789 $10 £20 ¥30 40% 50‰</div>
+          <div class="tnum onum">0123456789 $10 £20 ¥30 40% 50‰</div>
+        </div>
+        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;tnum onum&quot;&gt;0123456789 $10 £20 ¥30 40% 50‰&lt;/span&gt;</code></pre>
+      </div>
+    </section>
+
+    <section id="frac">
+      <h2><a href="#frac" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Diagonal fractions</h2>
+      <p>TODO description paragraph</p>
+      <div class="test bg-silver rounded mb3 mt3">
+        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1">
+          <div class=" gray">1/2 1/4 1/100</div>
+          <div class="frac">1/2 1/4 1/100</div>
+        </div>
+        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;frac&quot;&gt;1/2 1/4 1/100&lt;/span&gt;</code></pre>
+      </div>
+    </section>
+    <% /*
+    <section id="afrc">
+      <h2><a href="#afrc" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Alternate fractions</h2>
+      <p>TODO description paragraph</p>
+      <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1 red">
+        <div class="gray">1/2 1/4 1/100</div>
+        <div class="afrc">1/2 1/4 1/100</div>
+      </div>
+      <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;afrc&quot;&gt;1/2 1/4 1/100&lt;/span&gt;</code></pre>
+    </section>
+    */ %>
+    <section id="ordn">
+      <h2><a href="#ordn" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Ordinals</h2>
+      <p>TODO description paragraph</p>
+      <div class="test bg-silver rounded mb3 mt3">
+        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h0-responsive">
+          <div class=" gray">1<span class="test-feat">a</span> 2<span class="test-feat">o</span></div>
+          <div class="ordn"><span class="test-feat test-overlay" data-content="1">1a</span> <span class="test-feat test-overlay" data-content="2">2o</span></div>
+        </div>
+        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;ordn&quot;&gt;1a 2o&lt;/span&gt;</code></pre>
+      </div>
+    </section>
+    <section id="subs">
+      <h2><a href="#subs" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Subscripts</h2>
+      <p>TODO description paragraph</p>
+      <div class="test bg-silver rounded mb3 mt3">
+        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
+          <div class="gray">Test<span class="test-feat">1</span></div>
+          <div>Test<span class="subs test-feat">1</span> with <code>.subs</code> only</div>
+          <div class="gray">Test<sub class="test-feat">1</sub> with <code>sub</code> only</div>
+          <div>Test<sub class="subs test-feat">1</sub> with <code>sub</code> and <code>.subs</code></div>
+        </div>
+        <pre class="h4 bg-navy silver p2 language-html"><code>H&lt;sub class=&quot;subs&quot;&gt;2&lt;/sub&gt;O</code></pre>
+      </div>
+    </section>
+    <section id="sups">
+      <h2><a href="#sups" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Superscripts</h2>
+      <p>TODO description paragraph</p>
+      <div class="test bg-silver rounded mb3 mt3">
+        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
+          <div class="gray">Test<span class="test-feat">1</span></div>
+          <div>Test<span class="sups test-feat">1</span> with <code>.sups</code> only</div>
+          <div class="gray">Test<sup class="test-feat">1</sup> with <code>sup</code> only</div>
+          <div>Test<sup class="sups test-feat">1</sup> with <code>sup</code> and <code>.sups</code></div>
+        </div>
+        <pre class="h4 bg-navy silver p2 language-html"><code>H&lt;sup class=&quot;sups&quot;&gt;2&lt;/sup&gt;O</code></pre>
+      </div>
+    </section>
+    <section id="sinf">
+      <h2><a href="#sinf" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Scientific Inferiors</h2>
+      <p>Scientific Inferior are for chemical and mathematical typesetting, and include optically corrected letters and numbers:</p>
+      <div class="test bg-silver rounded mb3 mt3">
+        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h0 h0-responsive">
+          <div class="gray">H<span class="lnum test-feat">2</span>O</div>
+          <div class="gray">H<sub class="test-feat">2</sub>O</div>
+          <div>H<sub class="sinf test-feat">2</sub>O</div>
+        </div>
+        <pre class="h4 bg-navy silver p2 language-html"><code>H&lt;sub class=&quot;sinf&quot;&gt;2&lt;/sub&gt;O</code></pre>
+      </div>
+      <p>The second, greyed out example shown here shows the faux subscripts the browser creates by scaling whatever you put in the <code>H&lt;sub&lt;</code> tag; by using the <code>sinf</code> class from Utility OpenType instead, you’ll use the optically correct glyphs included in your web font. In browsers that don’t support the OpenType features, the browser default will still be used.</p>
+    </section>
+    <% /* <section id="zero">
+      <h2><a href="#zero" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Slashed Zero</h2>
+      <p>TODO description paragraph</p>
+      <div class="test bg-silver rounded mb3 mt3">
+        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-proxima h1 h0-responsive">
+          <div class="test-feat gray">$1,000,000</div>
+          <div class="zero">$1,000,000</div>
+        </div>
+        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;zero&quot;&gt;$1,000,000&lt;/span&gt;</code></pre>
+      </div>
+    </section>
+    <section id="zero-onum">
+      <h2><a href="#zero" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Slashed, Oldstyle Zero</h2>
+      <p>TODO description paragraph</p>
+      // This won’t work in Chrome, prob. others because `font-variant-numeric` isn’t supperted. Works in FF.
+      <div class="rounded bg-silver">
+        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-proxima h1 h0-responsive">
+          <div class="test-feat gray">$0.01 borrowed</div>
+          <div class="zero onum">$0.01 borrowed</div>
+        </div>
+        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;zero onum&quot;&gt;$0.01 borrowed&lt;/span&gt;</code></pre>
+      </div>
+    </section> */ %>
+    <section id="request">
+      <h2><a href="#request" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Feature requests</h2>
+      <a class="block mb3 mt3 p1 sm-p2 md-p3 rounded bg-silver black h2" href="https://github.com/kennethormandy/utility-opentype/issues">Think something is missing? Submit an issue or feature request on GitHub and <span class="purple">let’s talk about it</span>!</a>
+    </section>
+    <section id="design-decisions">
+      <h2><a href="#design-decisions" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Design decisions</h2>
+      <% /* <p>TODO Intro para… the idea that utility classes</p> */ %>
+      <blockquote>…provide the backbone for typography and layout and, once set, should never be changed or extended. Each utility should contain as few CSS properties as possible, generally just one or two. Utilities should do one thing and do it well, they should be simple and obvious to use, and they should operate independently.
+        <footer><span class="preface" data-content="—">Brent Jackson</span>, <a href="http://www.basscss.com/docs/reference/principles/#immutable-utilities"><cite>Basscss Design Principles</cite></a></footer>
+      </blockquote>
+      <ol>
+        <li>
+          <h3>OpenType features should be as easy to apply as bold and italics.</h3>
+          <p><em>Utility OpenType</em> provides concise, declarative classes that you can easily apply to entire elements, or specifically scope to inline spans when you are working on fine typographic details like discretionary ligatures. They are intended to be immutable and don’t interfere or concern themselves with any other part of your <abbr class="caps">CSS</abbr>.</p>
+        </li>
+        <li>
+          <h3>OpenType features should cascade predictably.</h3>
+          <p>The <code>font-feature-settings</code> property is often used to apply these advanced typographic features, because it has significantly better browser support than its lower-level, <code>font-variant-*</code> counterpart. Unfortunately, it doesn’t always carry down one feature to the next; imagine only being able to use the <code>margin</code> or <code>font</code> property in <abbr class="caps">CSS</abbr>, but not <code>margin-left</code> or <code>font-size</code> and you’ll begin to see the maintainability problems this can cause.</p>
+          <p>You can read more about this problem in my article on <a href="http://kennethormandy.com/journal/normalize-opentype-css">normalizing OpenType feature defaults</a>, and on <a href="#">Typekit Practice</a>—or, skip both: Utility OpenType mitigates this problem through <abbr class="caps">CSS’</abbr> <code>@supports</code> feature queries.</p>
+        </li>
+        <li>
+          <h3>OpenType features should fallback gracefully.</h3>
+          <p>Provide a better experience for Chrome, Firefox, and Internet Explorer 10+ (yes, seriously) without negatively impacting the rest: <a href="#c2sc">Small Caps</a> are progressively enhanced from <code>text-transform: uppercase</code>, and <a href="#sinf">Scientific Inferiors</a> maintain the browser default <code>&lt;sub&gt;</code> styling so your H<sub class="subs">2</sub>O never says <span class="caps">H</span><span class="pnum">2</span><span class="caps">O</span>.</p>
+        </li>
+      </ol>
+    </section>
+    <section id="usage">
+      <h2><a href="#usage" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Usage</h2>
+      <p>Utility OpenType is ready to use with Sass, Post<abbr class="caps">CSS</abbr>, or vanilla <abbr class="caps">CSS</abbr>. If you’re using Sass or Post<abbr class="caps">CSS</abbr>, install it through npm:</p>
+      <pre class="h4 bg-navy silver p2 language-sh"><code><span class="select-none gray">$&nbsp;</span>npm install --save utility-opentype</code></pre>
+      <p>Then, include it within your source files:</p>
+      <pre class="h4 bg-navy silver p2 language-css"><code>@import "utility-opentype";</code></pre>
+      <p>If you’re using Sass without Eyeglass modules, you will need to include the actual path to the file in the <code>node_modules</code> directory, for example:</p>
+      <pre class="h4 bg-navy silver p2 language-css"><code>@import "../node_modules/utility-opentype/index";</code></pre>
+      <p>If you’d like to use the <abbr class="caps">CSS</abbr> directly, download the <a href="https://github.com/kennethormandy/utility-opentype">latest version of the compiled file</a>, or reference the hosted <abbr class="caps">CDN</abbr> version in your <abbr class="caps">HTML</abbr>:</p>
+      <pre class="h4 bg-navy silver p2 language-html"><code>&lt;link href=&quot;http://utility-opentype.kennethormandy.com/css/index.css&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
+      <p>That’s it! You’re ready to use the classes within your markup.</p>
+      <% /* TODO Show more complex example of using multiple classes here. */ %>
+    </section>
+    <section id="accessibility">
+      <h2><a href="#accessibility" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Accessibility</h2>
+      <p>OpenType features don’t alter the underlying text: spelling, the ability to copy-and-paste, interactive features like searching within a page or editing text, and accessibility considerations like compatibility with screen readers, are not impacted.</p>
+    </section>
+    <section id="browser-support">
+      <h2><a href="#browser-support" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Browser support</h2>
+      <p>The example shown are fully supported in Chrome, Firefox, and Internet Explorer 10+. Safari 6+ and Safari 6+ on i<abbr class="c2sc">OS</abbr> only support <a href="#liga">Common Ligatures</a> and <a href="#calt">Contextual Alternates</a>, and only as a browser default; they cannot be disabled via <abbr class="caps">CSS</abbr>.</p>
+      <p>All features use a combination of progressive enhancement and graceful degredation—primarily through <code>@supports</code> <abbr class="caps">CSS</abbr> feature queries—to mitigate problems on browsers and devices where advanced typography features aren’t supported.</p>
+    </section>
+    <% include _includes/newsletter.ejs %>
+  </div>
+  <footer class="mt4 bg-purple">
+    <div class="bg-lighten-3">
+      <div class="px2 py4 container">
+        <h3 id="works-cited">Works Cited</h3>
+        <ul>
+          <li><a href="practicaltypography.com/small-caps.html"><cite>Butterick’s Practical Typography</cite></a> Matthew Butterick</li>
+          <li><a href="https://www.typotheque.com/articles/opentype_features_in_web_browsers_-_tests"><cite>OpenType features in web browsers</cite></a> Gustavo Ferreira</li>
+          <li><a href="http://www.basscss.com/docs/reference/principles/"><cite>Basscss Design Principles</cite></a> Brent Jackson</li>
+          <li><a href="https://www.microsoft.com/typography/otspec/"><cite>OpenType specification</span></a> Microsoft, et al.</li>
+          <li><a href="http://stateofwebtype.com/"><cite>State of Web Type</cite></a> Bram Stein</li>
+          <li><a href="https://www.typotheque.com/fonts/echo/features"><cite>Echo font family, OpenType font features</cite></a> Typotheque</li>
+        </ul>
+        <h3 id="thanks">Thanks</h3>
+        <p>Thanks to <a href="https://twitter.com/quitequinn">Quinn Keaveney</a> and <a href="https://twitter.com/nicewebtype">Tim Brown</a> for their early feedback on this library. Thanks to <a href="https://twitter.com/rileycran">Riley Cran</a>, <a href="https://twitter.com/sintaxi">Brock Whitten</a>, and <a href="https://twitter.com/una">Una Kravets</a> for reviewing this site, and many other things I work on. I admire you all a great deal, and appreciate the help!</p>
+        <h3 id="colophon">Colophon</h3>
+        <p>Released for <a href="https://twitter.com/search?f=tweets&q=%23OpenTypeFeatures%20since%3A2015-12-06until%3A2015-12-15&src=typd">#<span class="smcp">opentypefeature</span> week</a>. Site and examples set in <a href="https://www.fontshop.com/superfamilies/ff-tisa"><abbr class="caps">FF</abbr> Tisa <span class="caps">&amp;</span> <abbr class="caps">FF</abbr> Tisa Sans</a> by Mitja Miklavčič, served by Typekit. Additional examples set in <a href="http://losttype.com/font/?name=lavanderia">Lavanderia</a> by James T. Edmondson, and <a href="http://losttype.com/font/?name=enemy">Enemy</a> by Shiva Nallaperumal, via Lost Type.</p>
+        <p>Designed and developed by <a href="http://twitter.com/kennethormandy">Kenneth Ormandy</a>, at the Central Library and home in Vancouver, <abbr title="British Columbia" class="caps">BC</abbr>. Documentation built with <a href="http://harpjs.com">Harp</a> and deployed on <a href="https://surge.sh">Surge.sh</a>.</p>
+      </div>
+    </div>
+    <a href="https://github.com/kennethormandy/utility-opentype" class="center block">
+      <div class="px2 py3 container">View Source</div>
+    </a>
+  </footer>
+</article>
+<script src="/js/index.js"></script>

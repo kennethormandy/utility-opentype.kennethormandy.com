@@ -11,9 +11,10 @@
     "harp": "0.20.1",
     "surge": "0.17.3",
     "terraform": "github:kennethormandy/terraform#ko-browserify-personal",
-    "typogr": "0.6.5"
+    "typogr": "ekalinin/typogr.js"
   },
   "scripts": {
+    "postinstall": "cat ./public/_prefix.jade ./node_modules/typogr/typogr.min.js | tr -d \"\r\n\" > ./node_modules/typogr/typogr.jade",
     "start": "harp server",
     "compile": "harp compile",
     "deploy": "npm run compile && surge ./www utility-opentype.kennethormandy.com"
