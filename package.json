@@ -14,7 +14,7 @@
     "typogr": "0.6.6"
   },
   "scripts": {
-    "postinstall": "cat ./public/_include/prefix.jade ./node_modules/typogr/typogr.min.js | tr -d \"\r\n\" > ./node_modules/typogr/typogr.jade",
+    "postinstall": "cat ./public/_includes/prefix.jade ./node_modules/typogr/typogr.min.js | tr -d \"\r\n\" > ./node_modules/typogr/typogr.jade",
     "start": "harp server",
     "compile": "harp compile",
     "deploy": "npm run compile && surge ./www utility-opentype.kennethormandy.com"
