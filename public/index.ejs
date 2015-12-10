@@ -54,7 +54,7 @@
   * the prefixed version. */
   -ms-font-feature-settings: "liga";
 
-  /* Best case scenerio, just use `font-variant-*`. */
+  /* Best case scenario, just use `font-variant-*`. */
   font-variant-ligatures: common-ligatures;
 }</code></pre>
       <% /*
@@ -71,7 +71,7 @@
     <% include _includes/newsletter.ejs %>
     <section id="dlig">
       <h2><a href="#dlig" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Discretionary ligatures</h2>
-      <p>Discretionary ligatures’ defining characteristic is that they are available to enable at your descrection: they are disabled by default. Often, these are additional ligatures that might be considered too attention-grabbing or unconventional to be enabled in many situations:</p>
+      <p>Discretionary ligatures’ defining characteristic is that they are available to enable at your discretion: they are disabled by default. Often, these are additional ligatures that might be considered too attention-grabbing or unconventional to be enabled in many situations:</p>
       <div class="test bg-silver rounded mb3 mt3">
         <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
           <div class="gray">The subo<span class="test-feat">ct</span>ave <span class="test-feat">st</span>alemate</div>
@@ -136,11 +136,11 @@
         </div>
         <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;case&quot;&gt;¿¡№25 @K​E​N​N​E​T​H​O​R​M​A​N​D​Y!?&lt;/span&gt;</code></pre>
       </div>
-      <p>As we continue to inject @-mentions, #hashtags, and other symbols into our text with increasing frequency, Case Sensitive Forms in fonts can help you show conhesively typeset this information.</p>
+      <p>As we continue to inject @-mentions, #hashtags, and other symbols into our text with increasing frequency, Case Sensitive Forms in fonts can help you show cohesively typeset this information.</p>
       <p>In well-formed fonts, the lowercase forms should be set as the defaults, with the all-caps or lining variations available on the Case Sensitive Forms feature. This feature (and <abbr class="caps">CSS</abbr> class) also overrides any number styles set, turning <a href="#onum">Oldstyle Numbers</a> into <a href="#lnum">Lining Numbers</a>.</p>
     </section>
     <section id="titl">
-      <h2><a href="#titl" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Titling alternaes</h2>
+      <h2><a href="#titl" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Titling alternates</h2>
       <p>Titling Alternates provide alternates ready for display settings. In this example, <a href="www.losttype.com/font/?name=lavanderia">Lavanderia</a>’s titling caps provide a different tone, and let it work in additional headline settings:</p>
       <div class="test bg-silver rounded mb3 mt3">
         <div class="test overflow-hidden font-lavanderia p1 sm-p2 md-p3 rounded bg-silver h1 h0-responsive center">
@@ -208,7 +208,7 @@
     </section>
     <section id="pnum-onum">
       <h2><a href="#pnum-onum" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Proportional, Oldstyle numbers</h2>
-      <p>There are situations where different kinds of number styles are useful based on the kind of information you are trying to typeset. Not all typefaces contain all number styles, but if they are availably, these helper classes will use them. Oldstyle, proportional numbers are often the default in typefaces intended for setting long-form text, especailly serifs:</p>
+      <p>There are situations where different kinds of number styles are useful based on the kind of information you are trying to typeset. Not all typefaces contain all number styles, but if they are availably, these helper classes will use them. Oldstyle, proportional numbers are often the default in typefaces intended for setting long-form text, especially serifs:</p>
       <div class="test bg-silver rounded mb3 mt3">
         <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1">
           <% /* <div class="gray">0123456789 $10 £20 ¥30 40% 50‰</div> */ %>
@@ -370,7 +370,7 @@
         <li>
           <h3>OpenType features should cascade predictably.</h3>
           <p>The <code>font-feature-settings</code> property is often used to apply these advanced typographic features, because it has significantly better browser support than its lower-level, <code>font-variant-*</code> counterpart. Unfortunately, it doesn’t always carry down one feature to the next; imagine only being able to use the <code>margin</code> or <code>font</code> property in <abbr class="caps">CSS</abbr>, but not <code>margin-left</code> or <code>font-size</code> and you’ll begin to see the maintainability problems this can cause.</p>
-          <p>You can read more about this problem in my article on <a href="http://kennethormandy.com/journal/normalize-opentype-css">normalizing OpenType feature defaults</a>, and on <a href="#">Typekit Practice</a>—or, skip both: Utility OpenType mitigates this problem through <abbr class="caps">CSS’</abbr> <code>@supports</code> feature queries.</p>
+          <p>You can read more about this problem in my article on <a href="http://kennethormandy.com/journal/normalize-opentype-css">normalising OpenType feature defaults</a>, and on <a href="#">Typekit Practice</a>—or, skip both: Utility OpenType mitigates this problem through <abbr class="caps">CSS’</abbr> <code>@supports</code> feature queries.</p>
         </li>
         <li>
           <h3>OpenType features should fallback gracefully.</h3>
@@ -398,7 +398,7 @@
     <section id="browser-support">
       <h2><a href="#browser-support" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Browser support</h2>
       <p>The example shown are fully supported in Chrome, Firefox, and Internet Explorer 10+. Safari 6+ and Safari 6+ on i<abbr class="c2sc">OS</abbr> only support <a href="#liga">Common Ligatures</a> and <a href="#calt">Contextual Alternates</a>, and only as a browser default; they cannot be disabled via <abbr class="caps">CSS</abbr>.</p>
-      <p>All features use a combination of progressive enhancement and graceful degredation—primarily through <code>@supports</code> <abbr class="caps">CSS</abbr> feature queries—to mitigate problems on browsers and devices where advanced typography features aren’t supported.</p>
+      <p>All features use a combination of progressive enhancement and graceful degradation—primarily through <code>@supports</code> <abbr class="caps">CSS</abbr> feature queries—to mitigate problems on browsers and devices where advanced typography features aren’t supported.</p>
     </section>
     <% include _includes/newsletter.ejs %>
   </div>
