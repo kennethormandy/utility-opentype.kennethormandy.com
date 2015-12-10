@@ -131,17 +131,17 @@
       <p>Case Sensitive Forms are alternate glyphs that are specifically deisng to work alongside all caps settings, or alongside text:</p>
       <div class="test bg-silver rounded mb3 mt3">
         <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1">
-          <div class="gray"><span class="test-feat">¿¡</span><span class="test-feat">№25</span> <span class="test-feat">@</span>K&#8203E&#8203N&#8203N&#8203E&#8203T&#8203H&#8203O&#8203R&#8203M&#8203A&#8203N&#8203D&#8203Y<span class="test-feat">!?</span></div>
-          <div class="case"><span class="test-feat">¿¡</span><span class="test-feat">№25</span> <span class="test-feat">@</span>K&#8203E&#8203N&#8203N&#8203E&#8203T&#8203H&#8203O&#8203R&#8203M&#8203A&#8203N&#8203D&#8203Y<span class="test-feat">!?</span></div>
+          <div class="gray"><span class="test-feat">¿¡</span><span class="test-feat">№25</span> <span class="test-feat">@</span>K&#8203;E&#8203;N&#8203;N&#8203;E&#8203;T&#8203;H&#8203;O&#8203;R&#8203;M&#8203;A&#8203;N&#8203;D&#8203;Y<span class="test-feat">!?</span></div>
+          <div class="case"><span class="test-feat">¿¡</span><span class="test-feat">№25</span> <span class="test-feat">@</span>K&#8203;E&#8203;N&#8203;N&#8203;E&#8203;T&#8203;H&#8203;O&#8203;R&#8203;M&#8203;A&#8203;N&#8203;D&#8203;Y<span class="test-feat">!?</span></div>
         </div>
-        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;case&quot;&gt;¿¡WHAT!? $1,000!?&lt;/span&gt;</code></pre>
+        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;case&quot;&gt;¿¡№25 @K​E​N​N​E​T​H​O​R​M​A​N​D​Y!?&lt;/span&gt;</code></pre>
       </div>
       <p>As we continue to inject @-mentions, #hashtags, and other symbols into our text with increasing frequency, Case Sensitive Forms in fonts can help you show conhesively typeset this information.</p>
       <p>In well-formed fonts, the lowercase forms should be set as the defaults, with the all-caps or lining variations available on the Case Sensitive Forms feature. This feature (and <abbr class="caps">CSS</abbr> class) also overrides any number styles set, turning <a href="#onum">Oldstyle Numbers</a> into <a href="#lnum">Lining Numbers</a>.</p>
     </section>
     <section id="titl">
       <h2><a href="#titl" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Titling alternaes</h2>
-      <p>TODO description paragraph</p>
+      <p>Titling Alternates provide alternates ready for display settings. In this example, <a href="www.losttype.com/font/?name=lavanderia">Lavanderia</a>’s titling caps provide a different tone, and let it work in additional headline settings:</p>
       <div class="test bg-silver rounded mb3 mt3">
         <div class="test overflow-hidden font-lavanderia p1 sm-p2 md-p3 rounded bg-silver h1 h0-responsive center">
           <div class="gray calt-off"><span class="test-feat">S</span>ign <span class="test-feat">P</span>ainters <span class="calt"><span class="test-feat">R</span>ule</span></div>
@@ -152,7 +152,7 @@
     </section>
     <section id="calt">
       <h2><a href="#calt" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Contextual alternates</h2>
-      <p>TODO description paragraph</p>
+      <p>Contextual alternates are particularly important for fonts that intend to mimic lettering, whether they are scripts or stencils like Shiva Nallaperumal’s <a href="">Enemy</a>:
       <div class="test bg-silver rounded mb3 mt3">
         <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-enemy h1 h1-responsive">
           <div class="calt-off gray">B<span class="test-feat gray" data-content="o">oo</span><span class="test-feat gray" data-content="k">kk</span><span class="test-feat gray" data-content="e">ee</span>pers</div>
@@ -160,6 +160,8 @@
         </div>
         <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;calt&quot;&gt;Bookkeepers&lt;/span&gt;</code></pre>
       </div>
+      <p>For this font, glyphs alternate to create a more convincing stencil pattern. Other fonts, particularly script fonts, take advantage of this OpenType feature differently.</p>
+      <p>The OpenType specification defines this feature, like <a href="#liga">Ligatures</a>, as a required default, so browsers should have it on already. In practice, this is not always the case, so you can also enable it with the Utility OpenType <code>.calt</code> class.
       <% /*
       <div class="clearfix">
         <div class="col col-2"><div class="p2 bg-green">Chrome</div></div>
@@ -173,7 +175,7 @@
     </section>
     <section id="hist">
       <h2><a href="#hist" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Historical alternates</h2>
-      <p>Historical glyph variants are for glyphs that are not likely to be useful in everyday settings, but were </p>
+      <p>Historical glyph variants aren’t likely to be useful in everyday most typesetting situations, but may prove useful when trying to reference the past:</p>
       <div class="test bg-silver rounded mb3 mt3">
         <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
           <div class="gray">Bla<span class="test-feat">s</span>phemou<span class="test-feat">s</span></div>
@@ -181,10 +183,12 @@
         </div>
         <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;hist&quot;&gt;Blasphemous&lt;/span&gt;</code></pre>
       </div>
+      <p>The most common example of this is the long _s_, shown here.</p>
     </section>
     <section id="swsh">
       <h2><a href="#swsh" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Swash</h2>
-      <p>TODO description paragraph</p>
+      <% /* <p>TODO description paragraph</p> */ %>
+      <p>Swashes add additional flare to a typeface, and are usually best applied conservatively:</p>
       <div class="test bg-silver rounded mb3 mt3">
         <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-lavanderia h00 h00-responsive">
           <div class="gray">No<span class="test-feat">t</span>abl<span class="test-feat">y</span> Yours</div>
@@ -192,6 +196,15 @@
         </div>
         <pre class="h4 bg-navy silver p2 language-html"><code>No&lt;span class=&quot;swsh&quot;&gt;t&lt;/span&gt;abl&lt;span class=&quot;swsh&quot;&gt;y Yours&lt;/span&gt;</code></pre>
       </div>
+      <p>With the <code>.swsh</code> utility class, you can apply Swashes only to the letters you need. Applying them to a heading in its entirety can have an unintentionally uncontrolled look:</p>
+      <div class="test bg-silver rounded mb3 mt3">
+        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-lavanderia h00 h00-responsive">
+          <div class="gray swsh">No<span class="test-feat">t</span>ab<span class="test-feat">l</span><span class="test-feat">y</span></span> Yours</div>
+          <div>Notabl<span class="swsh test-feat">y</span> Yours</div>
+        </div>
+        <pre class="h4 bg-navy silver p2 language-html"><code>Notabl&lt;span class=&quot;swsh&quot;&gt;y Yours&lt;/span&gt;</code></pre>
+      </div>
+
     </section>
     <section id="pnum-onum">
       <h2><a href="#pnum-onum" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Proportional, Oldstyle numbers</h2>
@@ -218,7 +231,7 @@
     </section>
     <section id="tnum-lnum">
       <h2><a href="#tnum-lnum" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Tabular, Lining numbers</h2>
-      <p>TODO</p>
+      <% /* <p>TODO</p> */ %>
       <div class="test bg-silver rounded mb3 mt3">
         <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1">
           <% /* Width of line one should not equal width of line two */ %>
@@ -230,7 +243,7 @@
     </section>
     <section id="tnum-onum">
       <h2><a href="#tnum-onum" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Tabular, Oldstyle numbers</h2>
-      <p>TODO</p>
+      <% /* <p>TODO</p> */ %>
       <div class="test bg-silver rounded mb3 mt3">
         <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1">
           <div class="gray">0123456789 $10 £20 ¥30 40% 50‰</div>
@@ -242,7 +255,8 @@
 
     <section id="frac">
       <h2><a href="#frac" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Diagonal fractions</h2>
-      <p>TODO description paragraph</p>
+      <p>This feature is very useful when working with basic fractions: just write your fractions in plain text, as you might anyway—1&#8203;/&#8203;10—and they will automatically be assembled into optically corrected numerators and denominators, properly spaced as fractions—<span class="frac">1/10</span>—in fonts that support this OpenType feature:
+      <% /* <p>TODO description paragraph</p> */ %>
       <div class="test bg-silver rounded mb3 mt3">
         <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1">
           <div class=" gray">1/2 1/4 1/100</div>
@@ -250,11 +264,12 @@
         </div>
         <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;frac&quot;&gt;1/2 1/4 1/100&lt;/span&gt;</code></pre>
       </div>
+      <p>Some fonts include a second, stacked fraction style. This is accessible through an <code>.afrc</code> class.
     </section>
     <% /*
     <section id="afrc">
       <h2><a href="#afrc" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Alternate fractions</h2>
-      <p>TODO description paragraph</p>
+      // <p>TODO description paragraph</p>
       <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1 red">
         <div class="gray">1/2 1/4 1/100</div>
         <div class="afrc">1/2 1/4 1/100</div>
@@ -264,18 +279,18 @@
     */ %>
     <section id="ordn">
       <h2><a href="#ordn" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Ordinals</h2>
-      <p>TODO description paragraph</p>
+      <p>Ordinals usually follow numbers. A typeface might include specific glpyh combinations for 1<sups class="ordn">st</sups> or 2<sups class="ordn">nd</sups>. There also might be ordinals available for different languages, like Italian:</p>
       <div class="test bg-silver rounded mb3 mt3">
         <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h0-responsive">
-          <div class=" gray">1<span class="test-feat">a</span> 2<span class="test-feat">o</span></div>
-          <div class="ordn"><span class="test-feat test-overlay" data-content="1">1a</span> <span class="test-feat test-overlay" data-content="2">2o</span></div>
+          <div class=" gray">La 2<span class="test-feat">a</span> pagina</div>
+          <div>La <span class="test-feat test-overlay ordn" data-content="2">2a</span> pagina</div>
         </div>
-        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;ordn&quot;&gt;1a 2o&lt;/span&gt;</code></pre>
+        <pre class="h4 bg-navy silver p2 language-html"><code>La &lt;span class=&quot;ordn&quot;&gt;2a&lt;/span&gt; pagina</code></pre>
       </div>
     </section>
     <section id="subs">
       <h2><a href="#subs" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Subscripts</h2>
-      <p>TODO description paragraph</p>
+      <% /* <p>TODO description paragraph</p> */ %>
       <div class="test bg-silver rounded mb3 mt3">
         <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
           <div class="gray">Test<span class="test-feat">1</span></div>
@@ -288,7 +303,7 @@
     </section>
     <section id="sups">
       <h2><a href="#sups" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Superscripts</h2>
-      <p>TODO description paragraph</p>
+      <% /* <p>TODO description paragraph</p> */ %>
       <div class="test bg-silver rounded mb3 mt3">
         <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
           <div class="gray">Test<span class="test-feat">1</span></div>
@@ -314,7 +329,7 @@
     </section>
     <% /* <section id="zero">
       <h2><a href="#zero" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Slashed Zero</h2>
-      <p>TODO description paragraph</p>
+      // <p>TODO description paragraph</p>
       <div class="test bg-silver rounded mb3 mt3">
         <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-proxima h1 h0-responsive">
           <div class="test-feat gray">$1,000,000</div>
@@ -325,7 +340,7 @@
     </section>
     <section id="zero-onum">
       <h2><a href="#zero" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Slashed, Oldstyle Zero</h2>
-      <p>TODO description paragraph</p>
+      // <p>TODO description paragraph</p>
       // This won’t work in Chrome, prob. others because `font-variant-numeric` isn’t supperted. Works in FF.
       <div class="rounded bg-silver">
         <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-proxima h1 h0-responsive">
@@ -342,9 +357,11 @@
     <section id="design-decisions">
       <h2><a href="#design-decisions" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Design decisions</h2>
       <% /* <p>TODO Intro para… the idea that utility classes</p> */ %>
+      <p>Following the ideas established in Basscss, utility classes should
       <blockquote>…provide the backbone for typography and layout and, once set, should never be changed or extended. Each utility should contain as few CSS properties as possible, generally just one or two. Utilities should do one thing and do it well, they should be simple and obvious to use, and they should operate independently.
         <footer><span class="preface" data-content="—">Brent Jackson</span>, <a href="http://www.basscss.com/docs/reference/principles/#immutable-utilities"><cite>Basscss Design Principles</cite></a></footer>
       </blockquote>
+      <p>This library should work well alongside Basscss or any declarative CSS framework. The classes are design with the idea that:
       <ol>
         <li>
           <h3>OpenType features should be as easy to apply as bold and italics.</h3>
