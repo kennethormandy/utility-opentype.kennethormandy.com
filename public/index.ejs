@@ -1,6 +1,6 @@
 <article class="liga">
   <div class="px2 sm-px4 lg-px2 container">
-    <header class="mb4">
+    <header class="mb4 clearfix">
       <h1 class="h1 h1-responsive font-tisa">Utility OpenType</h1>
       <p class="h2">Simple, <abbr class="caps">CSS</abbr> utility classes for advanced typographic features. Falls back gracefully through feature queries. Less than 1.75<abbr class="c2sc">kB</abbr><span class="widont">&nbsp;</span>gzipped. <a class="preface" data-content="—" href="https://twitter.com/kennethormandy">@kennethormandy</a></p>
       <p><em><a href="https://github.com/kennethormandy/utility-opentype">Utility OpenType</a></em> helps you make the most of the font that you are loading in, reducing convoluted <abbr class="caps">CSS</abbr> into four-letter, typographic utility classes, because:</p>
@@ -25,7 +25,7 @@
       </div>
       */ %>
     </header>
-    <section id="liga">
+    <section class="clearfix" id="liga">
       <h2><a href="#liga" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Common ligatures</h2>
       <p>Ligatures can help solve problems with space in a typeface, especially where collisions might otherwise occur:
       <div class="test bg-silver rounded mb3 mt3">
@@ -69,7 +69,7 @@
       */ %>
     </section>
     <% include _includes/newsletter.ejs %>
-    <section id="dlig">
+    <section class="clearfix" id="dlig">
       <h2><a href="#dlig" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Discretionary ligatures</h2>
       <p>Discretionary ligatures’ defining characteristic is that they are available to enable at your discretion: they are disabled by default. Often, these are additional ligatures that might be considered too attention-grabbing or unconventional to be enabled in many situations:</p>
       <div class="test bg-silver rounded mb3 mt3">
@@ -81,7 +81,7 @@
       </div>
       <p>Other typefaces approach this entirely differently, offering up different number styles when wrapping numbers in brackets, like the typeface <a href="https://www.typotheque.com/fonts/echo/features">Echo from Typotheque</a>.</p>
     </section>
-    <section id="smcp">
+    <section class="clearfix" id="smcp">
       <h2><a href="#smcp" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Small Caps</h2>
       <p>Small Caps are less distracting than all capitals for longer form text settings. They also provide an additional way to apply emphasis within text:</p>
       <div class="test bg-silver rounded mb3 mt3">
@@ -115,7 +115,7 @@
 }</code></pre>
     </blockquote>
     </section>
-    <section id="c2sc">
+    <section class="clearfix" id="c2sc">
       <h2><a href="#c2sc" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Caps to Small Caps</h2>
       <p>The Caps to Small Caps OpenType feature will convert all letters, not just lowercase letters, into Small Caps:</p>
       <div class="test bg-silver rounded mb3 mt3">
@@ -126,7 +126,7 @@
         <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;c2sc&quot;&gt;icu ICU Icu&lt;/span&gt;</code></pre>
       </div>
     </section>
-    <section id="case">
+    <section class="clearfix" id="case">
       <h2><a href="#case" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Case sensitive forms</h2>
       <p>Case Sensitive Forms are alternate glyphs that are specifically designed to work alongside all caps settings, or alongside text:</p>
       <div class="test bg-silver rounded mb3 mt3">
@@ -139,7 +139,7 @@
       <p>As we continue to inject @-mentions, #hashtags, and other symbols into our text with increasing frequency, Case Sensitive Forms in fonts can help you show cohesively typeset this information.</p>
       <p>In well-formed fonts, the lowercase forms should be set as the defaults, with the all-caps or lining variations available on the Case Sensitive Forms feature. This feature (and <abbr class="caps">CSS</abbr> class) also overrides any number styles set, turning <a href="#onum">Oldstyle Numbers</a> into <a href="#lnum">Lining Numbers</a>.</p>
     </section>
-    <section id="titl">
+    <section class="clearfix" id="titl">
       <h2><a href="#titl" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Titling alternates</h2>
       <p>Titling Alternates provide alternates ready for display settings. In this example, <a href="http://losttype.com/font/?name=lavanderia">Lavanderia</a>’s titling caps provide a different tone, and let it work in additional headline settings:</p>
       <div class="test bg-silver rounded mb3 mt3">
@@ -150,7 +150,7 @@
         <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;titl&quot;&gt;Sign Painters Rule&lt;/span&gt;</code></pre>
       </div>
     </section>
-    <section id="calt">
+    <section class="clearfix" id="calt">
       <h2><a href="#calt" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Contextual alternates</h2>
       <p>Contextual alternates are particularly important for fonts that intend to mimic lettering, whether they are scripts or stencils like Shiva Nallaperumal’s <a href="">Enemy</a>:
       <div class="test bg-silver rounded mb3 mt3">
@@ -173,7 +173,7 @@
       </div>
       */ %>
     </section>
-    <section id="hist">
+    <section class="clearfix" id="hist">
       <h2><a href="#hist" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Historical alternates</h2>
       <p>Historical glyph variants aren’t likely to be useful in everyday most typesetting situations, but may prove useful when trying to reference the past:</p>
       <div class="test bg-silver rounded mb3 mt3">
@@ -185,7 +185,7 @@
       </div>
       <p>The most common example of this is the long <em>s</em>, shown in this example.</p>
     </section>
-    <section id="swsh">
+    <section class="clearfix" id="swsh">
       <h2><a href="#swsh" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Swash</h2>
       <% /* <p>TODO description paragraph</p> */ %>
       <p>Swashes add additional flare to a typeface, and are usually best applied conservatively:</p>
@@ -206,7 +206,7 @@
       </div>
 
     </section>
-    <section id="pnum-onum">
+    <section class="clearfix" id="pnum-onum">
       <h2><a href="#pnum-onum" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Proportional, Oldstyle numbers</h2>
       <p>There are situations where different kinds of number styles are useful based on the kind of information you are trying to typeset. Not all typefaces contain all number styles, but if they are availably, these helper classes will use them. Oldstyle, proportional numbers are often the default in typefaces intended for setting long-form text, especially serifs:</p>
       <div class="test bg-silver rounded mb3 mt3">
@@ -218,7 +218,7 @@
       </div>
       <p>Proportional numbers are designed to take up whatever width they need. Old style numbers, <code>.onum</code>, are designed to sit alongside the lowercase letters, so they are less distracting within text.</p>
     </section>
-    <section id="pnum-lnum">
+    <section class="clearfix" id="pnum-lnum">
       <h2><a href="#pnum-lnum" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Proportional, Lining numbers</h2>
       <p>Tabular numerals are monospaced, so different information can be easily compared when stacked vertically:</p>
       <div class="test bg-silver rounded mb3 mt3">
@@ -229,7 +229,7 @@
         <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;pnum lnum&quot;&gt;0123456789 $10 £20 ¥30 40% 50‰&lt;/span&gt;</code></pre>
       </div>
     </section>
-    <section id="tnum-lnum">
+    <section class="clearfix" id="tnum-lnum">
       <h2><a href="#tnum-lnum" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Tabular, Lining numbers</h2>
       <% /* <p>TODO</p> */ %>
       <div class="test bg-silver rounded mb3 mt3">
@@ -241,7 +241,7 @@
         <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;tnum lnum&quot;&gt;0123456789 $10 £20 ¥30 40% 50‰&lt;/span&gt;</code></pre>
       </div>
     </section>
-    <section id="tnum-onum">
+    <section class="clearfix" id="tnum-onum">
       <h2><a href="#tnum-onum" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Tabular, Oldstyle numbers</h2>
       <% /* <p>TODO</p> */ %>
       <div class="test bg-silver rounded mb3 mt3">
@@ -253,7 +253,7 @@
       </div>
     </section>
 
-    <section id="frac">
+    <section class="clearfix" id="frac">
       <h2><a href="#frac" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Diagonal fractions</h2>
       <p>This feature is very useful when working with basic fractions: just write your fractions in plain text, as you might anyway—1&#8203;/&#8203;10—and they will automatically be assembled into optically corrected numerators and denominators, properly spaced as fractions—<span class="frac">1/10</span>—in fonts that support this OpenType feature:
       <% /* <p>TODO description paragraph</p> */ %>
@@ -267,7 +267,7 @@
       <p>Some fonts include a second, stacked fraction style. This is accessible through an <code>.afrc</code> class.
     </section>
     <% /*
-    <section id="afrc">
+    <section class="clearfix" id="afrc">
       <h2><a href="#afrc" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Alternate fractions</h2>
       // <p>TODO description paragraph</p>
       <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1 red">
@@ -277,7 +277,7 @@
       <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;afrc&quot;&gt;1/2 1/4 1/100&lt;/span&gt;</code></pre>
     </section>
     */ %>
-    <section id="ordn">
+    <section class="clearfix" id="ordn">
       <h2><a href="#ordn" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Ordinals</h2>
       <p>Ordinals usually follow numbers. A typeface might include specific glpyh combinations for 1<sups class="ordn">st</sups> or 2<sups class="ordn">nd</sups>. There also might be ordinals available for different languages, like Italian:</p>
       <div class="test bg-silver rounded mb3 mt3">
@@ -288,7 +288,7 @@
         <pre class="h4 bg-navy silver p2 language-html"><code>La &lt;span class=&quot;ordn&quot;&gt;2a&lt;/span&gt; pagina</code></pre>
       </div>
     </section>
-    <section id="subs">
+    <section class="clearfix" id="subs">
       <h2><a href="#subs" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Subscripts</h2>
       <% /* <p>TODO description paragraph</p> */ %>
       <div class="test bg-silver rounded mb3 mt3">
@@ -301,7 +301,7 @@
         <pre class="h4 bg-navy silver p2 language-html"><code>H&lt;sub class=&quot;subs&quot;&gt;2&lt;/sub&gt;O</code></pre>
       </div>
     </section>
-    <section id="sups">
+    <section class="clearfix" id="sups">
       <h2><a href="#sups" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Superscripts</h2>
       <% /* <p>TODO description paragraph</p> */ %>
       <div class="test bg-silver rounded mb3 mt3">
@@ -314,7 +314,7 @@
         <pre class="h4 bg-navy silver p2 language-html"><code>H&lt;sup class=&quot;sups&quot;&gt;2&lt;/sup&gt;O</code></pre>
       </div>
     </section>
-    <section id="sinf">
+    <section class="clearfix" id="sinf">
       <h2><a href="#sinf" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Scientific Inferiors</h2>
       <p>Scientific Inferior are for chemical and mathematical typesetting, and include optically corrected letters and numbers:</p>
       <div class="test bg-silver rounded mb3 mt3">
@@ -327,7 +327,7 @@
       </div>
       <p>The second, greyed out example shown here shows the faux subscripts the browser creates by scaling whatever you put in the <code>H&lt;sub&gt;</code> tag; by using the <code>sinf</code> class from Utility OpenType instead, you’ll use the optically correct glyphs included in your web font. In browsers that don’t support the OpenType features, the browser default will still be used.</p>
     </section>
-    <% /* <section id="zero">
+    <% /* <section class="clearfix" id="zero">
       <h2><a href="#zero" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Slashed Zero</h2>
       // <p>TODO description paragraph</p>
       <div class="test bg-silver rounded mb3 mt3">
@@ -338,7 +338,7 @@
         <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;zero&quot;&gt;$1,000,000&lt;/span&gt;</code></pre>
       </div>
     </section>
-    <section id="zero-onum">
+    <section class="clearfix" id="zero-onum">
       <h2><a href="#zero" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Slashed, Oldstyle Zero</h2>
       // <p>TODO description paragraph</p>
       // This won’t work in Chrome, prob. others because `font-variant-numeric` isn’t supperted. Works in FF.
@@ -350,11 +350,11 @@
         <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;zero onum&quot;&gt;$0.01 borrowed&lt;/span&gt;</code></pre>
       </div>
     </section> */ %>
-    <section id="request">
+    <section class="clearfix" id="request">
       <h2><a href="#request" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Feature requests</h2>
       <a class="block mb3 mt3 p1 sm-p2 md-p3 rounded bg-silver black h2 p4 block" href="https://github.com/kennethormandy/utility-opentype/issues">Think something is missing? Submit an issue or feature request on GitHub and <span class="purple">let’s talk about it</span>!</a>
     </section>
-    <section id="design-decisions">
+    <section class="clearfix" id="design-decisions">
       <h2><a href="#design-decisions" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Design decisions</h2>
       <% /* <p>TODO Intro para… the idea that utility classes</p> */ %>
       <p>Following the ideas established in Basscss, utility classes should
@@ -378,7 +378,7 @@
         </li>
       </ol>
     </section>
-    <section id="usage">
+    <section class="clearfix" id="usage">
       <h2><a href="#usage" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Usage</h2>
       <p>Utility OpenType is ready to use with Sass, Post<abbr class="caps">CSS</abbr>, or vanilla <abbr class="caps">CSS</abbr>. If you’re using Sass or Post<abbr class="caps">CSS</abbr>, install it through npm:</p>
       <pre class="h4 bg-navy silver p2 language-sh"><code><span class="select-none token punctuation">$&nbsp;</span>npm install --save utility-opentype</code></pre>
@@ -391,11 +391,11 @@
       <p>That’s it! You’re ready to use the classes within your markup.</p>
       <% /* TODO Show more complex example of using multiple classes here. */ %>
     </section>
-    <section id="accessibility">
+    <section class="clearfix" id="accessibility">
       <h2><a href="#accessibility" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Accessibility</h2>
       <p>OpenType features don’t alter the underlying text: spelling, the ability to copy-and-paste, interactive features like searching within a page or editing text, and accessibility considerations like compatibility with screen readers, are not impacted.</p>
     </section>
-    <section id="browser-support">
+    <section class="clearfix" id="browser-support">
       <h2><a href="#browser-support" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Browser support</h2>
       <p>The example shown are fully supported in Chrome, Firefox, and Internet Explorer 10+. Safari 6+ and Safari 6+ on i<abbr class="c2sc">OS</abbr> only support <a href="#liga">Common Ligatures</a> and <a href="#calt">Contextual Alternates</a>, and only as a browser default; they cannot be disabled via <abbr class="caps">CSS</abbr>.</p>
       <p>All features use a combination of progressive enhancement and graceful degradation—primarily through <code>@supports</code> <abbr class="caps">CSS</abbr> feature queries—to mitigate problems on browsers and devices where advanced typography features aren’t supported.</p>
