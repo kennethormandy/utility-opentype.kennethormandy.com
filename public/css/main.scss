@@ -368,3 +368,17 @@ box-sizing: border-box;
     height: auto;
     font-size: inherit;
 }
+
+// Custom Basscss Border Colour alternative
+//
+// Markup:
+// <div class="border border-thick">This will have a thick border</div>
+//
+// No styleguide reference.
+.border-thick {
+  border-width: $space-1;
+}
+
+.border-purple {
+  border-color: $purple;
+}
