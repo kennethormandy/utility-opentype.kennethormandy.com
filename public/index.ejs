@@ -28,13 +28,15 @@
     <section class="clearfix" id="liga">
       <h2><a href="#liga" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Common ligatures</h2>
       <p>Ligatures can help solve problems with space in a typeface, especially where collisions might otherwise occur:
-      <div class="test bg-silver rounded mb3 mt3">
-        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
+      <figure class="test bg-silver rounded mb3 mt3">
+        <div class="test-case cursor-default overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
           <div class="liga-off gray">Di<span class="test-feat">ffi</span>cultés de <span class="test-feat">fi</span>lm</div>
           <div class="liga">Di<span class="test-feat">ffi</span>cultés de <span class="test-feat">fi</span>lm</div>
         </div>
-        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;liga&quot;&gt;Difficult&#233;s de film&lt;/span&gt;</code></pre>
-      </div>
+        <figcaption>
+          <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;liga&quot;&gt;Difficult&#233;s de film&lt;/span&gt;</code></pre>
+        </figcaption>
+      </figure>
       <p>Most common ligatures mitigate spacing issues between specific combinations of letters within a typeface, often by connecting glyphs that might otherwise collide. The most cited example of this occurs between the <em>f</em> and itself, or another letter like <em>i</em>. Here, the <em>f&#8202;f&#8202;i</em> are turned into an <em class="liga">ffi</em> ligature, where the glyphs would awkwardly overlap otherwise.</p>
       <p>Ligatures may also be included in a font to add character to a typeface, differentiate it, or to make a script font more convincing.</p>
       <h3>Implementation</h3>
@@ -71,25 +73,29 @@
     <section class="clearfix" id="dlig">
       <h2><a href="#dlig" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Discretionary ligatures</h2>
       <p>Discretionary ligatures’ defining characteristic is that they are available to enable at your discretion: they are disabled by default. Often, these are additional ligatures that might be considered too attention-grabbing or unconventional to be enabled in many situations:</p>
-      <div class="test bg-silver rounded mb3 mt3">
-        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
+      <figure class="test bg-silver rounded mb3 mt3">
+        <div class="test-case cursor-default overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
           <div class="gray">The subo<span class="test-feat">ct</span>ave <span class="test-feat">st</span>alemate</div>
           <div class="dlig">The subo<span class="test-feat">ct</span>ave <span class="test-feat">st</span>alemate</div>
         </div>
-        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;dlig&quot;&gt;Suboctave stalemate&lt;/span&gt;</code></pre>
-      </div>
+        <figcaption>
+          <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;dlig&quot;&gt;Suboctave stalemate&lt;/span&gt;</code></pre>
+        </figcaption>
+      </figure>
       <p>Other typefaces approach this entirely differently, offering up different number styles when wrapping numbers in brackets, like the typeface <a href="https://www.typotheque.com/fonts/echo/features">Echo from Typotheque</a>.</p>
     </section>
     <section class="clearfix" id="smcp">
       <h2><a href="#smcp" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Small Caps</h2>
       <p>Small Caps are less distracting than all capitals for longer form text settings. They also provide an additional way to apply emphasis within text:</p>
-      <div class="test bg-silver rounded mb3 mt3">
-        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
+      <figure class="test bg-silver rounded mb3 mt3">
+        <div class="test-case cursor-default overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
           <div class="gray"><span class="test-feat">icu</span> I&#8203;C&#8203;U Icu</div>
           <div class="smcp"><span class="test-feat">icu</span> I&#8203;C&#8203;U Icu</div>
         </div>
-        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;smcp&quot;&gt;icu ICU Icu&lt;/span&gt;</code></pre>
-      </div>
+        <figcaption>
+          <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;smcp&quot;&gt;icu ICU Icu&lt;/span&gt;</code></pre>
+        </figcaption>
+      </figure>
       <p>Matthew Butterick’s <cite>Practical Typography</cite> includes a very informative <a href="http://practicaltypography.com/small-caps.html">section on small caps</a>. As he points out:</p>
       <blockquote>Don’t click on the small-cap for­mat­ting box in your word proces­sor. Ever. And don’t use the CSS prop­erty font-vari­ant: small-caps. Ever. These op­tions do not pro­duce small caps. They pro­duce in­fe­rior counterfeits.<footer><span class="preface" data-content="—">Matthew Butterick</span>, <a href="http://practicaltypography.com/small-caps.html"><cite>Practical Typography</cite></a></footer></blockquote>
       <p>Instead, Utility OpenType uses the more recent <code>font-variant-caps: small-caps</code> feature:</p>
@@ -117,48 +123,56 @@
     <section class="clearfix" id="c2sc">
       <h2><a href="#c2sc" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Caps to Small Caps</h2>
       <p>The Caps to Small Caps OpenType feature will convert all letters, not just lowercase letters, into Small Caps:</p>
-      <div class="test bg-silver rounded mb3 mt3">
-        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
+      <figure class="test bg-silver rounded mb3 mt3">
+        <div class="test-case cursor-default overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
           <div class="gray test-feat">icu I&#8203;C&#8203;U Icu</div>
           <div class="c2sc test-feat">icu I&#8203;C&#8203;U Icu</div>
         </div>
-        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;c2sc&quot;&gt;icu ICU Icu&lt;/span&gt;</code></pre>
-      </div>
+        <figcaption>
+          <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;c2sc&quot;&gt;icu ICU Icu&lt;/span&gt;</code></pre>
+        </figcaption>
+      </figure>
     </section>
     <section class="clearfix" id="case">
       <h2><a href="#case" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Case sensitive forms</h2>
       <p>Case Sensitive Forms are alternate glyphs that are specifically designed to work alongside all caps settings, or alongside text:</p>
-      <div class="test bg-silver rounded mb3 mt3">
-        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1">
+      <figure class="test bg-silver rounded mb3 mt3">
+        <div class="test-case cursor-default overflow-hidden p1 sm-p2 md-p3 font-tisa h1">
           <div class="gray"><span class="test-feat">¿¡</span><span class="test-feat">№25</span> <span class="test-feat">@</span>K&#8203;E&#8203;N&#8203;N&#8203;E&#8203;T&#8203;H&#8203;O&#8203;R&#8203;M&#8203;A&#8203;N&#8203;D&#8203;Y<span class="test-feat">!?</span></div>
           <div class="case"><span class="test-feat">¿¡</span><span class="test-feat">№25</span> <span class="test-feat">@</span>K&#8203;E&#8203;N&#8203;N&#8203;E&#8203;T&#8203;H&#8203;O&#8203;R&#8203;M&#8203;A&#8203;N&#8203;D&#8203;Y<span class="test-feat">!?</span></div>
         </div>
-        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;case&quot;&gt;¿¡№25 @K​E​N​N​E​T​H​O​R​M​A​N​D​Y!?&lt;/span&gt;</code></pre>
-      </div>
+        <figcaption>
+          <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;case&quot;&gt;¿¡№25 @K​E​N​N​E​T​H​O​R​M​A​N​D​Y!?&lt;/span&gt;</code></pre>
+        </figcaption>
+      </figure>
       <p>Today, we inject @-mentions, add #hashtags, and prefix text with symbols in our writing, more often than ever; Case Sensitive Forms in fonts can help you cohesively typeset this information.</p>
       <p>In well-formed fonts, the lowercase forms should be set as the defaults, with the all-caps or lining variations available on the Case Sensitive Forms feature. This feature (and <abbr class="caps">CSS</abbr> class) also overrides any number styles set, turning <a href="#onum">Oldstyle Numbers</a> into <a href="#lnum">Lining Numbers</a>.</p>
     </section>
     <section class="clearfix" id="titl">
       <h2><a href="#titl" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Titling alternates</h2>
       <p>Titling Alternates provide alternates ready for display settings. In this example, <a href="http://losttype.com/font/?name=lavanderia">Lavanderia</a>’s titling caps provide a different tone, and let it work in additional headline settings:</p>
-      <div class="test bg-silver rounded mb3 mt3">
-        <div class="test overflow-hidden font-lavanderia p1 sm-p2 md-p3 rounded bg-silver h1 h0-responsive center">
+      <figure class="test bg-silver rounded mb3 mt3">
+        <div class="test-case overflow-hidden font-lavanderia p1 sm-p2 md-p3 rounded bg-silver h1 h0-responsive center">
           <div class="gray calt-off"><span class="test-feat">S</span>ign <span class="test-feat">P</span>ainters <span class="calt"><span class="test-feat">R</span>ule</span></div>
           <div class="titl calt-off"><span class="test-feat">S</span>ign <span class="test-feat">P</span>ainters <span class="calt"><span class="test-feat">R</span>ule</span></div>
         </div>
-        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;titl&quot;&gt;Sign Painters Rule&lt;/span&gt;</code></pre>
-      </div>
+        <figcaption>
+          <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;titl&quot;&gt;Sign Painters Rule&lt;/span&gt;</code></pre>
+        </figcaption>
+      </figure>
     </section>
     <section class="clearfix" id="calt">
       <h2><a href="#calt" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Contextual alternates</h2>
       <p>Contextual alternates are particularly important for fonts that intend to mimic lettering, whether they are scripts or stencils like Shiva Nallaperumal’s <a href="">Enemy</a>:
-      <div class="test bg-silver rounded mb3 mt3">
-        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-enemy h1 h1-responsive">
+      <figure class="test bg-silver rounded mb3 mt3">
+        <div class="test-case cursor-default overflow-hidden p1 sm-p2 md-p3 font-enemy h1 h1-responsive">
           <div class="calt-off gray">B<span class="test-feat gray" data-content="o">oo</span><span class="test-feat gray" data-content="k">kk</span><span class="test-feat gray" data-content="e">ee</span>pers</div>
           <div class="calt">B<span class="test-feat test-overlay" data-content="o">oo</span><span class="test-feat test-overlay" data-content="k">kk</span><span class="test-feat test-overlay" data-content="e">ee</span>pers</div>
         </div>
-        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;calt&quot;&gt;Bookkeepers&lt;/span&gt;</code></pre>
-      </div>
+        <figcaption>
+          <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;calt&quot;&gt;Bookkeepers&lt;/span&gt;</code></pre>
+        </figcaption>
+      </figure>
       <p>For this font, glyphs alternate to create a more convincing stencil pattern. Other fonts, particularly script fonts, take advantage of this OpenType feature differently.</p>
       <p>The OpenType specification defines this feature, like <a href="#liga">Ligatures</a>, as a required default, so browsers should have it on already. In practice, this is not always the case, so you can also enable it with the Utility OpenType <code>.calt</code> class.
       <% /*
@@ -175,101 +189,115 @@
     <section class="clearfix" id="hist">
       <h2><a href="#hist" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Historical alternates</h2>
       <p>Historical glyph variants aren’t likely to be useful in everyday most typesetting situations, but may prove useful when trying to reference the past:</p>
-      <div class="test bg-silver rounded mb3 mt3">
-        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
+      <figure class="test bg-silver rounded mb3 mt3">
+        <div class="test-case cursor-default overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
           <div class="gray">Bla<span class="test-feat">s</span>phemou<span class="test-feat">s</span></div>
           <div class="hist">Bla<span class="test-feat">s</span>phemou<span class="test-feat">s</span></div>
         </div>
-        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;hist&quot;&gt;Blasphemous&lt;/span&gt;</code></pre>
-      </div>
+        <figcaption>
+          <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;hist&quot;&gt;Blasphemous&lt;/span&gt;</code></pre>
+        </figcaption>
+      </figure>
       <p>The most common example of this is the long <em>s</em>, shown in this example.</p>
     </section>
     <section class="clearfix" id="swsh">
       <h2><a href="#swsh" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Swash</h2>
       <% /* <p>TODO description paragraph</p> */ %>
       <p>Swashes add additional flare to a typeface, and are usually best applied conservatively:</p>
-      <div class="test bg-silver rounded mb3 mt3">
-        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-lavanderia h00 h00-responsive">
+      <figure class="test bg-silver rounded mb3 mt3">
+        <div class="test-case cursor-default overflow-hidden p1 sm-p2 md-p3 font-lavanderia h00 h00-responsive">
           <div class="gray">No<span class="test-feat">t</span>abl<span class="test-feat">y</span> Yours</div>
           <div>No<span class="swsh test-feat">t</span>abl<span class="swsh test-feat">y</span> Yours</div>
         </div>
-        <pre class="h4 bg-navy silver p2 language-html"><code>No&lt;span class=&quot;swsh&quot;&gt;t&lt;/span&gt;abl&lt;span class=&quot;swsh&quot;&gt;y Yours&lt;/span&gt;</code></pre>
-      </div>
+        <figcaption>
+          <pre class="h4 bg-navy silver p2 language-html"><code>No&lt;span class=&quot;swsh&quot;&gt;t&lt;/span&gt;abl&lt;span class=&quot;swsh&quot;&gt;y Yours&lt;/span&gt;</code></pre>
+        </figcaption>
+      </figure>
       <p>With the <code>.swsh</code> utility class, you can apply Swashes only to the letters you need. Applying them to a heading in its entirety can have an unintentionally uncontrolled look:</p>
-      <div class="test bg-silver rounded mb3 mt3">
-        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-lavanderia h00 h00-responsive">
+      <figure class="test bg-silver rounded mb3 mt3">
+        <div class="test-case cursor-default overflow-hidden p1 sm-p2 md-p3 font-lavanderia h00 h00-responsive">
           <div class="gray swsh">No<span class="test-feat">t</span>ab<span class="test-feat">l</span><span class="test-feat">y</span></span> Yours</div>
           <div>Notabl<span class="swsh test-feat">y</span> Yours</div>
         </div>
-        <pre class="h4 bg-navy silver p2 language-html"><code>Notabl&lt;span class=&quot;swsh&quot;&gt;y Yours&lt;/span&gt;</code></pre>
-      </div>
-
+        <figcaption>
+          <pre class="h4 bg-navy silver p2 language-html"><code>Notabl&lt;span class=&quot;swsh&quot;&gt;y Yours&lt;/span&gt;</code></pre>
+        </figcaption>
+      </figure>
     </section>
     <section class="clearfix" id="pnum-onum">
       <h2><a href="#pnum-onum" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Proportional, Oldstyle numbers</h2>
       <p>There are situations where different kinds of number styles are useful based on the kind of information you are trying to typeset. Not all typefaces contain all number styles, but if they are availably, these helper classes will use them. Oldstyle, proportional numbers are often the default in typefaces intended for setting long-form text, especially serifs:</p>
-      <div class="test bg-silver rounded mb3 mt3">
-        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1">
+      <figure class="test bg-silver rounded mb3 mt3">
+        <div class="test-case cursor-default overflow-hidden p1 sm-p2 md-p3 font-tisa h1">
           <% /* <div class="gray">0123456789 $10 £20 ¥30 40% 50‰</div> */ %>
           <div class="pnum onum">0123456789 $10 £20 ¥30 40% 50‰</div>
         </div>
-        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;pnum onum&quot;&gt;0123456789 $10 £20 ¥30 40% 50‰&lt;/span&gt;</code></pre>
-      </div>
+        <figcaption>
+          <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;pnum onum&quot;&gt;0123456789 $10 £20 ¥30 40% 50‰&lt;/span&gt;</code></pre>
+        </figcaption>
+      </figure>
       <p>Proportional numbers are designed to take up whatever width they need. Old style numbers, <code>.onum</code>, are designed to sit alongside the lowercase letters, so they are less distracting within text.</p>
     </section>
     <section class="clearfix" id="pnum-lnum">
       <h2><a href="#pnum-lnum" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Proportional, Lining numbers</h2>
       <p>Tabular numerals are monospaced, so different information can be easily compared when stacked vertically:</p>
-      <div class="test bg-silver rounded mb3 mt3">
-        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1">
+      <figure class="test bg-silver rounded mb3 mt3">
+        <div class="test-case cursor-default overflow-hidden p1 sm-p2 md-p3 font-tisa h1">
           <div class="gray">0123456789 $10 £20 ¥30 40% 50‰</div>
           <div class="pnum lnum">0123456789 $10 £20 ¥30 40% 50‰</div>
         </div>
-        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;pnum lnum&quot;&gt;0123456789 $10 £20 ¥30 40% 50‰&lt;/span&gt;</code></pre>
-      </div>
+        <figcaption>
+          <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;pnum lnum&quot;&gt;0123456789 $10 £20 ¥30 40% 50‰&lt;/span&gt;</code></pre>
+        </figcaption>
+      </figure>
     </section>
     <section class="clearfix" id="tnum-lnum">
       <h2><a href="#tnum-lnum" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Tabular, Lining numbers</h2>
       <% /* <p>TODO</p> */ %>
-      <div class="test bg-silver rounded mb3 mt3">
-        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1">
+      <figure class="test bg-silver rounded mb3 mt3">
+        <div class="test-case cursor-default overflow-hidden p1 sm-p2 md-p3 font-tisa h1">
           <% /* Width of line one should not equal width of line two */ %>
           <div class="gray">0123456789 $10 £20 ¥30 40% 50‰</div>
           <div class="tnum lnum">0123456789 $10 £20 ¥30 40% 50‰</div>
         </div>
-        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;tnum lnum&quot;&gt;0123456789 $10 £20 ¥30 40% 50‰&lt;/span&gt;</code></pre>
-      </div>
+        <figcaption>
+          <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;tnum lnum&quot;&gt;0123456789 $10 £20 ¥30 40% 50‰&lt;/span&gt;</code></pre>
+        </figcaption>
+      </figure>
     </section>
     <section class="clearfix" id="tnum-onum">
       <h2><a href="#tnum-onum" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Tabular, Oldstyle numbers</h2>
       <% /* <p>TODO</p> */ %>
-      <div class="test bg-silver rounded mb3 mt3">
-        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1">
+      <figure class="test bg-silver rounded mb3 mt3">
+        <div class="test-case cursor-default overflow-hidden p1 sm-p2 md-p3 font-tisa h1">
           <div class="gray">0123456789 $10 £20 ¥30 40% 50‰</div>
           <div class="tnum onum">0123456789 $10 £20 ¥30 40% 50‰</div>
         </div>
-        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;tnum onum&quot;&gt;0123456789 $10 £20 ¥30 40% 50‰&lt;/span&gt;</code></pre>
-      </div>
+        <figcaption>
+          <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;tnum onum&quot;&gt;0123456789 $10 £20 ¥30 40% 50‰&lt;/span&gt;</code></pre>
+        </figcaption>
+      </figure>
     </section>
-
     <section class="clearfix" id="frac">
       <h2><a href="#frac" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Diagonal fractions</h2>
       <p>This feature is very useful when working with basic fractions: just write your fractions in plain text, as you might anyway—1&#8203;/&#8203;10—and they will automatically be assembled into optically corrected numerators and denominators, properly spaced as fractions—<span class="frac">1/10</span>—in fonts that support this OpenType feature:
       <% /* <p>TODO description paragraph</p> */ %>
-      <div class="test bg-silver rounded mb3 mt3">
-        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1">
+      <figure class="test bg-silver rounded mb3 mt3">
+        <div class="test-case cursor-default overflow-hidden p1 sm-p2 md-p3 font-tisa h1">
           <div class=" gray">1/2 1/4 1/100</div>
           <div class="frac">1/2 1/4 1/100</div>
         </div>
-        <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;frac&quot;&gt;1/2 1/4 1/100&lt;/span&gt;</code></pre>
-      </div>
+        <figcaption>
+          <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;frac&quot;&gt;1/2 1/4 1/100&lt;/span&gt;</code></pre>
+        </figcaption>
+      </figure>
       <p>Some fonts include a second, stacked fraction style. This is accessible through an <code>.afrc</code> class.
     </section>
     <% /*
     <section class="clearfix" id="afrc">
       <h2><a href="#afrc" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Alternate fractions</h2>
       // <p>TODO description paragraph</p>
-      <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1 red">
+      <div class="test-case cursor-default overflow-hidden p1 sm-p2 md-p3 font-tisa h1 red">
         <div class="gray">1/2 1/4 1/100</div>
         <div class="afrc">1/2 1/4 1/100</div>
       </div>
@@ -279,51 +307,59 @@
     <section class="clearfix" id="ordn">
       <h2><a href="#ordn" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Ordinals</h2>
       <p>Ordinals usually follow numbers. A typeface might include specific glpyh combinations for 1<sups class="ordn">st</sups> or 2<sups class="ordn">nd</sups>. There also might be ordinals available for different languages, like Italian:</p>
-      <div class="test bg-silver rounded mb3 mt3">
-        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h0-responsive">
+      <figure class="test bg-silver rounded mb3 mt3">
+        <div class="test-case cursor-default overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h0-responsive">
           <div class=" gray">La 2<span class="test-feat">a</span> pagina</div>
           <div>La <span class="test-feat test-overlay ordn" data-content="2">2a</span> pagina</div>
         </div>
-        <pre class="h4 bg-navy silver p2 language-html"><code>La &lt;span class=&quot;ordn&quot;&gt;2a&lt;/span&gt; pagina</code></pre>
-      </div>
+        <figcaption>
+          <pre class="h4 bg-navy silver p2 language-html"><code>La &lt;span class=&quot;ordn&quot;&gt;2a&lt;/span&gt; pagina</code></pre>
+        </figcaption>
+      </figure>
     </section>
     <section class="clearfix" id="subs">
       <h2><a href="#subs" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Subscripts</h2>
       <% /* <p>TODO description paragraph</p> */ %>
-      <div class="test bg-silver rounded mb3 mt3">
-        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
+      <figure class="test bg-silver rounded mb3 mt3">
+        <div class="test-case cursor-default overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
           <div class="gray">Test<span class="test-feat">1</span></div>
           <div>Test<span class="subs test-feat">1</span> with <code>.subs</code> only</div>
           <div class="gray">Test<sub class="test-feat">1</sub> with <code>sub</code> only</div>
           <div>Test<sub class="subs test-feat">1</sub> with <code>sub</code> and <code>.subs</code></div>
         </div>
-        <pre class="h4 bg-navy silver p2 language-html"><code>H&lt;sub class=&quot;subs&quot;&gt;2&lt;/sub&gt;O</code></pre>
-      </div>
+        <figcaption>
+          <pre class="h4 bg-navy silver p2 language-html"><code>H&lt;sub class=&quot;subs&quot;&gt;2&lt;/sub&gt;O</code></pre>
+        </figcaption>
+      </figure>
     </section>
     <section class="clearfix" id="sups">
       <h2><a href="#sups" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Superscripts</h2>
       <% /* <p>TODO description paragraph</p> */ %>
-      <div class="test bg-silver rounded mb3 mt3">
-        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
+      <figure class="test bg-silver rounded mb3 mt3">
+        <div class="test-case cursor-default overflow-hidden p1 sm-p2 md-p3 font-tisa h1 h1-responsive">
           <div class="gray">Test<span class="test-feat">1</span></div>
           <div>Test<span class="sups test-feat">1</span> with <code>.sups</code> only</div>
           <div class="gray">Test<sup class="test-feat">1</sup> with <code>sup</code> only</div>
           <div>Test<sup class="sups test-feat">1</sup> with <code>sup</code> and <code>.sups</code></div>
         </div>
-        <pre class="h4 bg-navy silver p2 language-html"><code>H&lt;sup class=&quot;sups&quot;&gt;2&lt;/sup&gt;O</code></pre>
-      </div>
+        <figcaption>
+          <pre class="h4 bg-navy silver p2 language-html"><code>H&lt;sup class=&quot;sups&quot;&gt;2&lt;/sup&gt;O</code></pre>
+        </figcaption>
+      </figure>
     </section>
     <section class="clearfix" id="sinf">
       <h2><a href="#sinf" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Scientific Inferiors</h2>
       <p>Scientific Inferior are for chemical and mathematical typesetting, and include optically corrected letters and numbers:</p>
-      <div class="test bg-silver rounded mb3 mt3">
-        <div class="test-case overflow-hidden p1 sm-p2 md-p3 font-tisa h0 h0-responsive">
+      <figure class="test bg-silver rounded mb3 mt3">
+        <div class="test-case cursor-default overflow-hidden p1 sm-p2 md-p3 font-tisa h0 h0-responsive">
           <div class="gray">H<span class="lnum test-feat">2</span>O</div>
           <div class="gray">H<sub class="test-feat">2</sub>O</div>
           <div>H<sub class="sinf test-feat">2</sub>O</div>
         </div>
-        <pre class="h4 bg-navy silver p2 language-html"><code>H&lt;sub class=&quot;sinf&quot;&gt;2&lt;/sub&gt;O</code></pre>
-      </div>
+        <figcaption>
+          <pre class="h4 bg-navy silver p2 language-html"><code>H&lt;sub class=&quot;sinf&quot;&gt;2&lt;/sub&gt;O</code></pre>
+        </figcaption>
+      </figure>
       <p>The second, greyed out example shown here shows the faux subscripts the browser creates by scaling whatever you put in the <code>H&lt;sub&gt;</code> tag; by using the <code>sinf</code> class from Utility OpenType instead, you’ll use the optically correct glyphs included in your web font. In browsers that don’t support the OpenType features, the browser default will still be used.</p>
     </section>
     <section class="clearfix" id="zero">
