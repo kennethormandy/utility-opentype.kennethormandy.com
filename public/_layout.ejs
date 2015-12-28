@@ -15,18 +15,7 @@
     <meta name="og:image:width" content="512">
     <meta name="og:image" content="http://utility-opentype.kennethormandy.com/media/og-image.gif">
     <meta name="twitter:image:src" content="http://utility-opentype.kennethormandy.com/media/og-image.gif">
-    <% /* TODO Async load Enemy, Lavanderia, any other example fonts, and monospaced font */ %>
-    <script>
-      (function(d) {
-        var config = {
-          kitId: 'vgs2evo',
-          scriptTimeout: 3000,
-          async: true
-        },
-        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-      })(document);
-    </script>
-    <link href="http://fonts.kennethormandy.com/css/utility-opentype.css" rel="stylesheet">
+    <script><% include ./js/core.js %></script>
     <link href="/css/main.css" rel="stylesheet">
     <% partial("../node_modules/typogr/typogr.jade") %>
   </head>

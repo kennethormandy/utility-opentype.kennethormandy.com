@@ -4,6 +4,8 @@
   "author": "Kenneth Ormandy <hello@kennethormandy.com> (http://kennethormandy.com)",
   "dependencies": {
     "basscss-sass": "3.0.0",
+    "fg-loadcss": "0.2.4",
+    "fontfaceobserver": "1.6.2",
     "smoothscroll": "0.2.2",
     "utility-opentype": "0.1.1"
   },
