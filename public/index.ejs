@@ -363,7 +363,7 @@
       <p>The second, greyed out example shown here shows the faux subscripts the browser creates by scaling whatever you put in the <code>H&lt;sub&gt;</code> tag; by using the <code>sinf</code> class from Utility OpenType instead, you’ll use the optically correct glyphs included in your web font. In browsers that don’t support the OpenType features, the browser default will still be used.</p>
     </section>
     <section class="clearfix" id="zero">
-      <h2><a href="#zero" class="font-proxima anchor speak-none select-none" aria-hidden="true">¶</a>Slashed Zero</h2>
+      <h2><a href="#zero" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Slashed Zero</h2>
       <p>To distinguish the zero from the letter <em>O</em>, some fonts include an alternate, slashed zero glyph. This can be useful in various inputs, like credit card forms, and when displaying data in tables.</p>
       <figure class="test bg-silver rounded mb3 mt3">
         <div class="test-case cursor-default overflow-hidden p1 sm-p2 md-p3 font-proxima h1 h0-responsive">
@@ -375,22 +375,19 @@
         </figcaption>
       </figure>
     </section>
-    <% /* Maybe move this to a combination section?
     <section class="clearfix" id="zero-onum">
-      <h2><a href="#zero" class="font-proxima anchor speak-none select-none" aria-hidden="true">¶</a>Slashed, Oldstyle Zero</h2>
-      // <p>TODO description paragraph</p>
-      // This won’t work in Chrome, prob. others because `font-variant-numeric` isn’t supperted. Works in FF.
-      <div class="rounded bg-silver">
+      <h2><a href="#zero" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Slashed, Oldstyle Zero</h2>
+      <p>You may also combine the <code>.zero</code> class with <code>.tnum</code>, <code>.onum</code>, <code>.lnum</code>, or <code>.pnum</code>. If the font includes those glyphs—like the additional Oldstyle Zero in the following example, it will be used instead:</p>
+      <figure class="test bg-silver rounded mb3 mt3">
         <div class="test-case cursor-default overflow-hidden p1 sm-p2 md-p3 font-proxima h1 h0-responsive">
-          <div class="test-feat gray">$0.01 Owed</div>
-          <div class="zero onum">$0.01 Owed</div>
+          <div class="gray">$<span class="test-feat">0</span>.<span class="test-feat">0</span>1 owed</div>
+          <div class="zero onum">$<span class="test-feat">0</span>.<span class="test-feat">0</span>1 owed</div>
         </div>
         <figcaption>
           <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;zero onum&quot;&gt;$0.01 Owed&lt;/span&gt;</code></pre>
         </figcaption>
       </figure>
     </section>
-    */ %>
     <section class="clearfix" id="request">
       <h2><a href="#request" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Feature requests</h2>
       <a class="block mb3 mt3 p1 sm-p2 md-p3 rounded bg-silver black h2 p4 block" href="https://github.com/kennethormandy/utility-opentype/issues">Think something is missing? Submit an issue or feature request on GitHub and <span class="purple">let’s talk about it</span>!</a>
