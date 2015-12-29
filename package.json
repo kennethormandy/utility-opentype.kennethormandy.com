@@ -7,7 +7,7 @@
     "fg-loadcss": "0.2.4",
     "fontfaceobserver": "1.6.2",
     "smoothscroll": "0.2.2",
-    "utility-opentype": "0.1.1"
+    "utility-opentype": "0.1.2"
   },
   "devDependencies": {
     "harp": "0.20.1",
