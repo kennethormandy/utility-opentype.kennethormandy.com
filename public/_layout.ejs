@@ -19,8 +19,10 @@
     <link href="/css/main.css" rel="stylesheet">
     <% partial("../node_modules/typogr/typogr.jade") %>
   </head>
-  <body class="border-top border-purple border-thick">
-    <%- typogr.typogrify(yield) %>
+  <body class="border-top border-purple border-thick bg-purple">
+    <div class="bg-white">
+      <%- typogr.typogrify(yield) %>
+    </div>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

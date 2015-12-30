@@ -69,11 +69,9 @@ html {
     font-feature-settings: "kern" 1;
   }
   font-kerning: normal;
-  // background: $white;
 }
 
 body {
-  background: transparent;
   font-size: 1.3em;
 }
 
@@ -153,11 +151,10 @@ a {
   overflow: hidden;
 }
 
-.bg-purple a {
-  // color: $darken-4;
+.a-alt a,
+a.a-alt {
   color: inherit;
   border-bottom: 1px solid $purple;
-  // text-shadow: 1px 1px 0 $lighten-1, -1px 1px 0px $lighten-1;
 }
 
 // Copy from 1403
