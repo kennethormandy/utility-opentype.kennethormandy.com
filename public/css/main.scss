@@ -387,3 +387,14 @@ box-sizing: border-box;
 .cursor-default {
   cursor: default;
 }
+
+// Basscss `.caps` override
+//
+// Fixed with a varabiel in Basscss v7.1.x, but
+// not converted to Sass yet. Utility OpenType
+// therefore no longer handles this.
+//
+// No styleguide reference.
+.caps {
+  letter-spacing: 0;
+}
