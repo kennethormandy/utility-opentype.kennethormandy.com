@@ -186,6 +186,34 @@
       </div>
       */ %>
     </section>
+    <section class="clearfix" id="salt">
+      <h2><a href="#salt" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Stylistic alternates</h2>
+      <p>Sometimes the a significant portion of a typeface’s unique character comes from a few specific glyphs. Stylistic Alternates offer an opportunity to change these, and change the tone of the typeface. In this example, Proxima Nova’s Stylistic Alternates are use to change to a more distnctive <em>l</em> and a single storey <em>a</em>, with the <em>G</em> and <em>y</em> following suit:</p>
+      <figure class="test bg-silver rounded mb3 mt3">
+        <div class="test-case cursor-default overflow-hidden p1 sm-p2 md-p3 font-proxima h1 h0-responsive">
+          <div class="gray"><span class="test-feat">G</span><span class="test-feat">l</span><span class="test-feat">a</span>stonbur<span class="test-feat">y</span></div>
+          <div class="salt"><span class="test-feat">G</span><span class="test-feat">l</span><span class="test-feat">a</span>stonbur<span class="test-feat">y</span></div>
+        </div>
+        <figcaption>
+          <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;salt&quot;&gt;Glastonbury&lt;/span&gt;</code></pre>
+        </figcaption>
+      </figure>
+      <p>Every other glyph in this particular typeface would remain the same. Depending on the typeface you are using, Stylistic Alternates might provide a different outcome. For example, with the typeface Lavanderia,</p>
+      <blockquote>Stylistic alternates provide simpler forms (no loops on top) for the lowercase <em>b</em>, <em>h</em>, <em>f</em>, <em>l</em>, and <em>k</em>. Simpler forms can work better in certain situations.
+        <footer><span class="preface" data-content="—">James T. Edmondson</span>, <a href="http://blog.losttype.com/introducing-lavanderia/"><cite>Introducing Lavanderia</cite></a></footer>
+      </blockquote>
+      <p>For this particular typeface, the result of using the <code>.salt</code> class is:</p>
+      <figure class="test bg-silver rounded mb3 mt3">
+        <div class="test-case cursor-default overflow-hidden p1 sm-p2 md-p3 font-lavanderia h1 h00-responsive">
+          <div class="gray calt-off"><span class="test-feat">b</span>oo<span class="test-feat">k</span>s<span class="test-feat">h</span>e<span class="test-feat">l</span><span class="test-feat">f</span></div>
+          <div class="salt calt-off"><span class="test-feat">b</span>oo<span class="test-feat">k</span>s<span class="test-feat">h</span>e<span class="test-feat">l</span><span class="test-feat">f</span></div>
+        </div>
+        <figcaption>
+          <pre class="h4 bg-navy silver p2 language-html"><code>&lt;span class=&quot;salt&quot;&gt;bookshelf&lt;/span&gt;</code></pre>
+        </figcaption>
+      </figure>
+
+    </section>
     <section class="clearfix" id="hist">
       <h2><a href="#hist" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Historical alternates</h2>
       <p>Historical glyph variants aren’t likely to be useful in everyday most typesetting situations, but may prove useful when trying to reference the past:</p>
