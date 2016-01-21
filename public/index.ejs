@@ -46,14 +46,14 @@
 <code>.liga {
 
   /* Gracefully degrade to `font-feature-settings` to
-  * avoid disrupting the OpenType feature cascade
-  * when possible. */
+   * avoid disrupting the OpenType feature cascade
+   * when possible. */
   @supports not (font-variant-ligatures: common-ligatures) {
     font-feature-settings: "liga";
   }
 
   /* IE doesn’t support @supports; explicitly use
-  * the prefixed version. */
+   * the prefixed version. */
   -ms-font-feature-settings: "liga";
 
   /* Best case scenario, just use `font-variant-*`. */
