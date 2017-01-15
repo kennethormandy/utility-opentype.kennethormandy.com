@@ -20,7 +20,7 @@ var kit = function (id) {
 }
 
 observer.check().then(function () {
-  loadCSS('http://fonts.kennethormandy.com/css/utility-opentype.css')
+  loadCSS('https://fontskennethormandycom-fmtnacsldr.now.sh/css/utility-opentype.css')
   kit('okc3efg')
 }, function () {
   console.warn('Tisa is not available')
