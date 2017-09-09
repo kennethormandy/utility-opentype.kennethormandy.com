@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "lt-lavanderia";
+  src: url('/fonts/lavanderia-n4.woff2') format('woff2'),
+       url('/fonts/lavanderia-n4.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-synthesis: none;
+}
+
+@font-face {
+  font-family: "lt-enemy";
+  src: url('/fonts/enemy-n4.woff2') format('woff2'),
+       url('/fonts/enemy-n4.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-synthesis: none;
+}
